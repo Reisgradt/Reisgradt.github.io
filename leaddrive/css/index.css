@@ -749,7 +749,8 @@ body {
           text-align: center; } }
     @media screen and (max-width: 640px) {
       .main-form__cell {
-        display: block; } }
+        display: block;
+        margin-bottom: 15px; } }
   .main-form__password {
     width: 300px; }
     @media screen and (max-width: 640px) {
@@ -770,9 +771,6 @@ body {
     display: inline-block;
     vertical-align: middle;
     margin-right: 17px; }
-    @media screen and (max-width: 640px) {
-      .main-form__checkbox {
-        margin-bottom: 12px; } }
     .main-form__checkbox input {
       display: none; }
       .main-form__checkbox input:checked + .main-form__checkbox-custom:before {
