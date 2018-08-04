@@ -1,0 +1,90 @@
+// main: main.less
+
+.main-content .main-content-main {
+//    border-left: 1px solid @border-color;
+//    border-right: 1px solid @border-color;
+    box-shadow: inset 1px 0 0 0 @border-color,
+                inset -1px 0 0 0 @border-color;
+}
+
+.main-content {
+    position: relative;
+    z-index: 333;
+    &:after {
+        @size: 10px;
+        content: '';
+        display: block;
+        height: @size;
+        width: 100%;
+        background: @logo-color;
+        position: absolute;
+        bottom: 0;
+        z-index: 222;
+    }
+    &-header {
+        height: @content-header - @content-border;
+        background: url("@{img-header}icon-line-bg.jpg") repeat;
+        position: relative;
+        text-align: center;
+        &-text {
+            color: #fff;
+            font-family: @bitter;
+            text-align: left;
+            width: @content-width;
+            padding-left: 37px;
+
+            h2 {
+                font-size: 2em;
+            }
+        }
+        &-wrapper {
+            display: inline-block;
+            text-align: left;
+            color: #fff;
+            font-family: @bitter;
+            .clearfix;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                height: @content-border;
+                width: 100%;
+                background: url("@{img-header}icon-line-bg.jpg") repeat;
+                top: -(@content-border);
+                left: 0;
+            }
+            img {
+                margin-right: 14px;
+                .toSquare(75px);
+                float: left;
+                transition: .09s;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:hover {
+                    border: 2px solid @logo-color;
+                }
+            }
+        }
+    }
+    &-main {
+        background: #fff;
+        position: relative;
+        z-index: 333;
+        padding: 26px 28px 0;
+        &:after {
+            content: '';
+            display: block;
+            width: @content-width;
+            height: @content-border;
+            background: #fff;
+            z-index: 333;
+            position: absolute;
+            bottom: -(@content-border);
+            left: 0;
+            box-shadow: inset 1px 0 0 0 @border-color,
+                        inset -1px 0 0 0 @border-color,
+                        inset 0 -1px 0 0 @border-color;
+        }
+    }
+}

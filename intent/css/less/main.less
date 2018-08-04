@@ -1,0 +1,27 @@
+// out: null
+@import "normalize";
+@import (reference) "variable";
+@import (reference) "mixins";
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: @bg-color;
+}
+
+.block-container {
+    width: @content-width;
+    margin: 0 auto;
+}
+
+@import "header";
+@import "content";
+@import "footer";

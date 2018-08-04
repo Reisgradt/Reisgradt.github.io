@@ -1,0 +1,23 @@
+// main: main.less
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.toSquare(@size) {
+    width: @size;
+    height: @size;
+}
+
+.toMiddle(@height) {
+    height: @height;
+    line-height: @height;
+}

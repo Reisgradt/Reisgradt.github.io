@@ -1,0 +1,60 @@
+// out: ../blog.css
+
+@import "main";
+
+.main-content-main {
+    display: table;
+    width: 100%;
+}
+
+.news {
+
+    &-header {
+        font-family: @bitter;
+    }
+    img {
+        width: 652px;
+        height: 302px;
+        box-shadow: inset 0 0 1px @border-color;
+    }
+    &-content {
+        display: table;
+
+        &-footer {
+            width: 134px;
+            display: table-cell;
+
+            &-item {
+                header {
+                    color: #000;
+                }
+                    color: @logo-color;
+            }
+
+        }
+        &-text {
+            display: table-cell;
+        }
+    }
+
+
+
+
+    &-wrapper {
+        display: table-cell;
+    }
+    &-aside {
+        display: table-cell;
+        width: 205px;
+
+        &-header {
+            &:after {
+                content: '';
+                display: block;
+                height: 5px;
+                width: 100%;
+                background: @logo-color;
+            }
+        }
+    }
+}

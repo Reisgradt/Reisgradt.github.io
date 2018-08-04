@@ -1,0 +1,91 @@
+// out: ../home.css, compress: true
+
+@import "main";
+
+.news-list {
+    .clearfix;
+    margin: 0 auto;
+
+    &-item {
+        @header-height: 31px;
+        float: left;
+        margin-right: @table-margin;
+        width: 274px;
+
+        &-icon {
+            .toSquare(@header-height);
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+        &:nth-child(1) &-icon {
+            background: url("@{logo-home}home_03.jpg") center no-repeat;
+        }
+        &:nth-child(2) &-icon {
+            background: url("@{logo-home}home_05.jpg") center no-repeat;
+        }
+        &:nth-child(3) &-icon {
+            background: url("@{logo-home}home_07.jpg") center no-repeat;
+        }
+        &-header {
+            display: inline-block;
+            line-height: @header-height;
+            vertical-align: middle;
+            font-family: @bitter;
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #25282A;
+            padding: 18px 0;
+        }
+        &-text {
+            color: #666;
+        }
+    }
+}
+.news-slogan {
+    text-align: center;
+    width: 500px;
+    margin: 50px auto;
+    font-family: @bitter;
+    font-size: 1.4em;
+
+    span {
+        color: #fff;
+        background: @logo-color;
+        .toMiddle(38px);
+        display: inline-block;
+        padding: 0 12px;
+    }
+}
+.news-photo-list {
+        font-family: @bitter;
+
+    li {
+        display: inline-block;
+        .toMiddle(31px);
+        margin-right: 20px - (3 * 7px);
+        padding: 0 7px;
+        font-weight: bold;
+
+        &:last-child {margin-right: 0;}
+    }
+    li.news-activate-item {
+        background: @logo-color;
+        color: #fff;
+    }
+}
+.news-imgZone {
+    padding-top: 28px;
+    .clearfix;
+
+    img {
+        margin: 20px 20px 0 0;
+        float: left;
+        width: 206px;
+        height: 120px;
+        //cursor: url("@{logo-cursor}cursor.cur"), pointer;
+        cursor: pointer;
+
+        &:nth-child(4n) {margin-right: 0;}
+    }
+}
