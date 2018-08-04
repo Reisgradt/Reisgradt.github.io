@@ -470,7 +470,6 @@ template {
 /* Form zone */
 /* Header */
 /* Footer */
-/* Mixins, Guy */
 *,
 *:before,
 *:after {
@@ -555,7 +554,10 @@ body {
           line-height: 40px; } }
       .main-header__menu__item a {
         text-decoration: none;
-        color: #333; }
+        color: #333;
+        transition: .3s; }
+        .main-header__menu__item a:hover {
+          color: #695dc8; }
       .main-header__menu__item .active-header-item {
         color: #695dc8; }
       .main-header__menu__item:after {
