@@ -522,6 +522,9 @@ body {
   .main-header__item {
     display: inline-block;
     font-size: 14px; }
+  .main-header__home {
+    position: relative;
+    z-index: 4; }
   .main-header__menu {
     text-align: right;
     width: 2000px;
@@ -1142,7 +1145,7 @@ body {
       background: #fff;
       width: 749px; }
     .block2__table__row {
-      display: table-row;
+      display: block;
       font-size: 16px;
       position: relative;
       text-decoration: none;
@@ -1655,7 +1658,6 @@ body {
       position: relative;
       z-index: 2; }
     .block5__table__row {
-      display: table-row;
       height: 46px;
       position: relative; }
       .block5__table__row:after {
@@ -1688,7 +1690,8 @@ body {
         background-image: url("../img/icon-21.svg"); }
     .block5__table__cell {
       display: table-cell;
-      vertical-align: middle; }
+      vertical-align: middle;
+      height: 46px; }
     .block5__table__num {
       padding-left: 30px;
       width: 56px;
