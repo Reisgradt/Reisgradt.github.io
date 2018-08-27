@@ -449,6 +449,7 @@ template {
 
 /* Главная часть сайта */
 /* Адаптив */
+/* login */
 /* HEADER */
 /* BLOCK1 */
 /* BLOCK2 */
@@ -474,12 +475,12 @@ body {
   background: #fafafa;
   color: #fff;
   font-family: "ProximaNova", sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+  position: relative; }
 
 .container {
   width: 1140px;
-  margin: 0 auto;
-  height: 100%; }
+  margin: 0 auto; }
 
 .block1,
 .block2,
@@ -554,7 +555,9 @@ body {
       .menu__item_login {
         width: 235px;
         background-image: linear-gradient(113deg, #fd9e4c, #f60d45);
-        text-align: center; }
+        text-align: center;
+        letter-spacing: 3px;
+        cursor: pointer; }
         .menu__item_login a {
           display: block;
           height: 100%;
@@ -724,6 +727,132 @@ body {
     .planetary__dot_3 {
       right: -477px;
       top: 32px; }
+
+.decorate-blocks {
+  position: relative; }
+
+.darker-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 5; }
+  .darker-bg_active {
+    display: block; }
+
+.login {
+  line-height: 10px;
+  display: none;
+  position: fixed;
+  width: 467px;
+  height: 433px;
+  background: #fff;
+  box-shadow: 0 15px 35px 0 rgba(78, 49, 177, 0.05);
+  border-radius: 5px;
+  z-index: 6;
+  left: 50%;
+  margin-left: -233.5px;
+  top: 50%;
+  margin-top: -216.5px;
+  padding: 64px 60px 56px; }
+  .login_active {
+    display: block; }
+  .login__close {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: url("../img/close.svg") center no-repeat;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer; }
+  .login__title {
+    text-align: center;
+    line-height: 20px;
+    font-size: 36px;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 40px; }
+  .login__input {
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 48px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-bottom: 25px;
+    opacity: .5; }
+    .login__input:focus {
+      outline: none;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      background: #fff;
+      opacity: 1;
+      border: solid 1px rgba(0, 0, 0, 0.1); }
+  .login__name:focus ~ .login__name-icon,
+  .login__pass:focus ~ .login__pass-icon {
+    opacity: .5; }
+  .login__icon {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background: center no-repeat;
+    left: 80px;
+    opacity: .2; }
+  .login__name-icon {
+    background-image: url("../img/person.svg");
+    top: 140px; }
+  .login__pass-icon {
+    background-image: url("../img/lock.svg");
+    top: 216px; }
+  .login__forgot {
+    float: right;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    line-height: 18px; }
+  .login__checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; }
+    .login__checkbox input {
+      display: none; }
+      .login__checkbox input:checked + .login__custom-checkbox:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url("../img/check.svg") center no-repeat; }
+    .login__checkbox__label {
+      font-size: 16px;
+      line-height: 18px;
+      color: rgba(0, 0, 0, 0.6); }
+  .login__custom-checkbox {
+    display: inline-block;
+    border-radius: 5px;
+    height: 18px;
+    width: 18px;
+    background: rgba(0, 0, 0, 0.05);
+    vertical-align: middle; }
+  .login__btn {
+    height: 60px;
+    width: 100%;
+    border-radius: 5px;
+    background-image: linear-gradient(100deg, #fd9e4c, #f60d45);
+    box-shadow: 0 10px 25px 0 rgba(212, 34, 31, 0.3);
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    cursor: pointer; }
 
 .block1 {
   height: 950px;
@@ -1351,11 +1480,9 @@ body {
       font-weight: bold; }
 
 .block5 {
-  padding-top: 330px;
-  height: 1748px;
+  padding-top: 118px;
+  height: 1536px;
   position: relative;
-  top: -212px;
-  margin-bottom: -212px;
   z-index: 2; }
   .block5 .container {
     position: relative;
@@ -1370,9 +1497,9 @@ body {
     box-shadow: 0 40px 70px 0 rgba(212, 34, 31, 0.3);
     border-radius: 50%;
     position: absolute;
-    top: -330px;
+    top: 3926px;
     left: -246px;
-    z-index: 2; }
+    z-index: 4; }
   .block5__bg-text {
     position: absolute;
     font-weight: 900;
