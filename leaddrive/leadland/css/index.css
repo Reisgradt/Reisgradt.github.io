@@ -459,6 +459,7 @@ template {
 /* BLOCK6 */
 /* BLOCK7 */
 /* FOOTER */
+/* New heights */
 *,
 *:before,
 *:after {
@@ -517,11 +518,24 @@ body {
   line-height: 100px;
   height: 100px;
   font-size: 0; }
+  @media screen and (max-width: 1600px) {
+    .main-header {
+      margin-bottom: -100px; } }
   .main-header .container {
     height: 100px; }
+    @media screen and (max-width: 1600px) {
+      .main-header .container {
+        height: 80px; } }
   .main-header__item {
     display: inline-block;
     font-size: 14px; }
+    @media screen and (max-width: 1600px) {
+      .main-header__item {
+        font-size: 11.2px; } }
+  @media screen and (max-width: 1600px) {
+    .main-header {
+      height: 80px;
+      line-height: 80px; } }
   .main-header__home {
     position: relative;
     z-index: 4; }
@@ -534,6 +548,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 4;
     line-height: 100px;
     height: 100px;
     font-size: 0; }
@@ -542,6 +557,9 @@ body {
       font-size: 14px;
       margin-right: 70px;
       position: relative; }
+      @media screen and (max-width: 1600px) {
+        .menu__item {
+          font-size: 11.2px; } }
       .menu__item:after {
         content: '';
         height: 4px;
@@ -549,7 +567,8 @@ body {
         border-radius: 50%;
         background: #fb6d4a;
         position: absolute;
-        top: 48px;
+        top: 50%;
+        margin-top: -2px;
         right: -37px; }
       .menu__item:last-child {
         margin-right: 0; }
@@ -561,10 +580,17 @@ body {
         text-align: center;
         letter-spacing: 3px;
         cursor: pointer; }
+        @media screen and (max-width: 1600px) {
+          .menu__item_login {
+            width: 188px; } }
         .menu__item_login a {
           display: block;
           height: 100%;
           width: 100%; }
+    @media screen and (max-width: 1600px) {
+      .main-header__menu {
+        height: 80px;
+        line-height: 80px; } }
 
 .main-footer {
   height: 562px;
@@ -831,7 +857,11 @@ body {
     .login__checkbox__label {
       font-size: 16px;
       line-height: 18px;
-      color: rgba(0, 0, 0, 0.6); }
+      color: rgba(0, 0, 0, 0.6);
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      -webkit-user-select: none; }
   .login__custom-checkbox {
     display: inline-block;
     border-radius: 5px;
@@ -861,6 +891,9 @@ body {
   height: 950px;
   overflow: hidden;
   background: linear-gradient(330deg, transparent, transparent 11%, rgba(0, 0, 0, 0.02) 11%, rgba(0, 0, 0, 0.02) 32%, transparent 32%, transparent 58%, rgba(0, 0, 0, 0.02) 58%, rgba(0, 0, 0, 0.02) 79%, transparent 79%, transparent), linear-gradient(127deg, #a0459c, #241aa8); }
+  @media screen and (max-width: 1600px) {
+    .block1 {
+      height: 730px; } }
   .block1__container {
     position: relative;
     padding-top: 182px; }
@@ -879,6 +912,9 @@ body {
     line-height: 63px;
     height: 63px;
     font-size: 0; }
+    @media screen and (max-width: 1600px) {
+      .block1__first {
+        margin-top: -20px; } }
     .block1__first__item {
       display: inline-block;
       font-size: 18px;
@@ -916,6 +952,10 @@ body {
     margin-bottom: 33px;
     position: relative;
     z-index: 1; }
+    @media screen and (max-width: 1600px) {
+      .block1__slogan2 {
+        font-size: 54.4px;
+        width: 564px; } }
   .block1__btn {
     height: 60px;
     width: 235px;
@@ -1044,9 +1084,15 @@ body {
   margin-bottom: -70.5px;
   background: url("../img/waves-01.png") no-repeat;
   background-position: center 100%; }
+  @media screen and (max-width: 1600px) {
+    .block2 {
+      height: 961.5px; } }
   .block2 .container {
     padding-top: 296.5px;
     position: relative; }
+    @media screen and (max-width: 1600px) {
+      .block2 .container {
+        padding-top: 226.5px; } }
     .block2 .container:before {
       content: '';
       display: block;
@@ -1059,6 +1105,10 @@ body {
       top: 296.5px;
       left: 999px;
       z-index: 0; }
+      @media screen and (max-width: 1600px) {
+        .block2 .container:before {
+          height: 224px;
+          width: 224px; } }
     .block2 .container:after {
       content: '';
       display: block;
@@ -1071,6 +1121,10 @@ body {
       top: 606.5px;
       left: 291px;
       z-index: 0; }
+      @media screen and (max-width: 1600px) {
+        .block2 .container:after {
+          height: 160px;
+          width: 160px; } }
   .block2__icon {
     height: 86px;
     width: 86px;
@@ -1151,11 +1205,15 @@ body {
       text-decoration: none;
       color: #000;
       z-index: 2; }
+      @media screen and (max-width: 1600px) {
+        .block2__table__row {
+          font-size: 14px; } }
       .block2__table__row:before {
         content: '';
         position: absolute;
         right: 32px;
-        top: 30px;
+        top: 50%;
+        margin-top: -5px;
         width: 0;
         height: 0;
         border-style: solid;
@@ -1187,6 +1245,9 @@ body {
     .block2__table__cell {
       height: 70px;
       vertical-align: middle; }
+      @media screen and (max-width: 1600px) {
+        .block2__table__cell {
+          height: 56px; } }
     .block2__table__num {
       width: 67px;
       text-align: center; }
@@ -1220,6 +1281,10 @@ body {
 .block3 {
   height: 1301px;
   padding-top: 118px; }
+  @media screen and (max-width: 1600px) {
+    .block3 {
+      padding-top: 48px;
+      height: 1131px; } }
   .block3 .container {
     position: relative; }
   .block3__title {
@@ -1245,6 +1310,9 @@ body {
     border-radius: 50%;
     top: 444px;
     left: 500px; }
+    @media screen and (max-width: 1600px) {
+      .block3__middle {
+        top: 414px; } }
   .block3__work-with-item {
     height: 100px;
     width: 100px;
@@ -1336,6 +1404,9 @@ body {
         background-image: url("../img/logo-07.png"); }
       .block3__work-with-systems__item:last-child {
         margin-right: 0; }
+    @media screen and (max-width: 1600px) {
+      .block3__work-with-systems {
+        top: 967px; } }
   .block3__shape1 {
     top: 92px; }
   .block3__shape2 {
@@ -1346,9 +1417,15 @@ body {
   background-image: linear-gradient(to right, #983893, #473fa9);
   position: relative;
   z-index: 2; }
+  @media screen and (max-width: 1600px) {
+    .block4 {
+      height: 734px; } }
   .block4 .container {
     position: relative;
     padding-top: 120px; }
+    @media screen and (max-width: 1600px) {
+      .block4 .container {
+        padding-top: 60px; } }
     .block4 .container:after {
       content: '';
       height: 300px;
@@ -1487,6 +1564,10 @@ body {
   height: 1536px;
   position: relative;
   z-index: 2; }
+  @media screen and (max-width: 1600px) {
+    .block5 {
+      padding-top: 38px;
+      height: 1356px; } }
   .block5 .container {
     position: relative;
     z-index: 0; }
@@ -1503,6 +1584,11 @@ body {
     top: 3926px;
     left: -246px;
     z-index: 4; }
+    @media screen and (max-width: 1600px) {
+      .block5__shape2 {
+        height: 224px;
+        width: 224px;
+        top: 3312px; } }
   .block5__bg-text {
     position: absolute;
     font-weight: 900;
@@ -1736,6 +1822,11 @@ body {
   background-image: url("../img/map.svg");
   background-position: center bottom 25px;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 1600px) {
+    .block6 {
+      padding-top: 400px;
+      height: 1430px;
+      background-position: center bottom; } }
   .block6 .container {
     position: relative; }
   .block6__icon {
@@ -1884,6 +1975,9 @@ body {
     position: absolute;
     top: 655px;
     width: 100%; }
+    @media screen and (max-width: 1600px) {
+      .block6__part2 {
+        top: 515px; } }
   .block6__title2 {
     font-weight: 800;
     font-size: 54px;
@@ -1912,7 +2006,7 @@ body {
       border-radius: 5px;
       box-shadow: 0 15px 35px 0 rgba(78, 49, 177, 0.05);
       margin-bottom: 60px; }
-      .block6__meet-us__item:nth-child(2n+1) {
+      .block6__meet-us__item:nth-child(2n + 1) {
         margin-right: 231px;
         margin-left: 102px; }
       .block6__meet-us__item:nth-last-child(1), .block6__meet-us__item:nth-last-child(2) {

@@ -63,7 +63,8 @@
 
     let darkerBg = document.querySelector('.darker-bg'),
         login = document.querySelector('.login'),
-        close = document.querySelector('.login__close');
+        close = document.querySelector('.login__close'),
+        nameField = document.querySelector('.login__name');
 
     loginBtn.addEventListener('click', toggleLogin);
     darkerBg.addEventListener('click', toggleLogin);
@@ -72,5 +73,6 @@
     function toggleLogin() {
         darkerBg.classList.toggle('darker-bg_active');
         login.classList.toggle('login_active');
+        nameField.focus();
     }
 })();
