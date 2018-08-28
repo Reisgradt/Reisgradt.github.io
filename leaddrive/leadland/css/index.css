@@ -1196,12 +1196,12 @@ body {
       display: table;
       box-shadow: 0 15px 35px 0 rgba(78, 49, 177, 0.05);
       border-radius: 5px;
-      background: #fff;
       width: 749px; }
     .block2__table__row {
       display: block;
       font-size: 16px;
       position: relative;
+      background: #fff;
       text-decoration: none;
       color: #000;
       z-index: 2; }
@@ -1745,7 +1745,8 @@ body {
       z-index: 2; }
     .block5__table__row {
       height: 46px;
-      position: relative; }
+      position: relative;
+      color: rgba(0, 0, 0, 0.7); }
       .block5__table__row:after {
         content: '';
         display: block;
@@ -1787,11 +1788,11 @@ body {
       color: #5f3ca3;
       width: 155px; }
     .block5__table__earnings {
-      width: 134px;
-      opacity: .7; }
+      width: 134px; }
+      .block5__table__earnings:before {
+        content: '$ '; }
     .block5__table__traffic {
-      font-weight: normal;
-      opacity: .7; }
+      font-weight: normal; }
   .block5__ava {
     position: absolute; }
     .block5__ava_1 {
@@ -2072,3 +2073,136 @@ body {
         vertical-align: middle; }
       .block7__follow-us__cell:first-child {
         text-align: left; }
+
+@-webkit-keyframes go-left-right {
+  from {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1; } }
+
+@keyframes go-left-right {
+  from {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1; } }
+
+@-webkit-keyframes go-right-left {
+  from {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1; } }
+
+@keyframes go-right-left {
+  from {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1; } }
+
+@-webkit-keyframes showIt {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes showIt {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.block1__first__item {
+  opacity: 0; }
+  .block1__first__item_anim {
+    -webkit-animation: go-left-right 1s;
+            animation: go-left-right 1s;
+    opacity: 1; }
+
+.block1__slogan2 {
+  opacity: 0; }
+  .block1__slogan2_anim {
+    -webkit-animation: go-left-right 1s;
+            animation: go-left-right 1s;
+    opacity: 1; }
+
+.block1__btn {
+  opacity: 0; }
+  .block1__btn_anim {
+    -webkit-animation: showIt 1.5s;
+            animation: showIt 1.5s;
+    opacity: 1; }
+
+.block2__table__row {
+  opacity: 0; }
+  .block2__table__row_anim {
+    -webkit-animation: go-right-left .5s;
+            animation: go-right-left .5s;
+    opacity: 1; }
+
+/*
+.block3__title {
+    opacity: 0;
+
+    &_anim {
+        animation: showIt 1s;
+        opacity: 1;
+    }
+}
+*/
+.block3__work-with-item {
+  opacity: 0; }
+  .block3__work-with-item_anim {
+    -webkit-animation: showIt 1s;
+            animation: showIt 1s;
+    opacity: 1; }
+
+.block3__work-with-systems__item {
+  opacity: 0; }
+  .block3__work-with-systems__item_anim {
+    -webkit-animation: go-right-left .7s;
+            animation: go-right-left .7s;
+    opacity: 1; }
+
+.block4__item {
+  opacity: 0; }
+  .block4__item_anim {
+    -webkit-animation: showIt 1.5s;
+            animation: showIt 1.5s;
+    opacity: 1; }
+
+.block4__icon,
+.block4__title,
+.block4__earning {
+  opacity: 0; }
+  .block4__icon_anim,
+  .block4__title_anim,
+  .block4__earning_anim {
+    -webkit-animation: go-left-right 1s;
+            animation: go-left-right 1s;
+    opacity: 1; }
+
+.block5__item {
+  opacity: 0; }
+  .block5__item_anim {
+    opacity: 1; }
+    .block5__item_anim:nth-of-type(1), .block5__item_anim:nth-of-type(2), .block5__item_anim:nth-of-type(3), .block5__item_anim:nth-of-type(4) {
+      -webkit-animation: go-left-right 1s;
+              animation: go-left-right 1s; }
+    .block5__item_anim:nth-of-type(5), .block5__item_anim:nth-of-type(6), .block5__item_anim:nth-of-type(7), .block5__item_anim:nth-of-type(8) {
+      -webkit-animation: go-right-left 1s;
+              animation: go-right-left 1s; }
