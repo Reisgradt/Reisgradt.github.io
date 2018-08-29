@@ -1,23 +1,130 @@
 (function () {
-
     /* slider 1 */
-    let slides = document.querySelectorAll('.slider__slide'),
-        sliderRadio = document.querySelectorAll('.slider__radio__item');
 
-    sliderRadio.forEach((radio, i) => {
-        radio.addEventListener('click', choseRadioBtn);
-        radio.dataset.number = i;
+    const transTime = 1;
+
+    /* Все вставленные элементы */
+    let sliderItems = document.querySelectorAll('.slider__slide__item');
+
+    function slideWhile(e) {
+        if (!e.target.classList.contains('slider__slide__item_active3')) return false;
+
+        if (num == currentIndex) {
+            goAhead = false;
+            sliderItems.forEach(item => {
+                item.style.transition = transTime + 's';
+            });
+        }
+
+        if (goAhead) {
+            if (getDirection() == 1) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+    }
+
+    sliderItems.forEach(item => {
+        item.addEventListener('transitionend', slideWhile);
     });
 
-    function choseRadioBtn(e) {
+    /* Контейнер под кнопки */
+    let radio = document.querySelector('.slider__radio');
 
+    /* Контейнер под элементы */
+    let sliderContainer = document.querySelector('.slider__container');
+
+    /* Индекс элемента слева */
+    let currentIndex = sliderItems.length;
+
+    let goAhead = false,
+        num = currentIndex;
+
+    /* Создание кнопок под каждый элемент */
+    Array.from(sliderItems).forEach((item, i) => {
+        let radioItem = document.createElement('div');
+        radioItem.classList.add('slider__radio__item');
+        radioItem.dataset.num = i;
+
+        radio.appendChild(radioItem);
+    });
+
+    /* Сохранение всех кнопок */
+    let sliderRadio = document.querySelectorAll('.slider__radio__item');
+
+    sliderRadio.forEach(radio => {
+        radio.addEventListener('click', choseRadioBtn);
+    });
+
+    function getDirection() {
+        let direction;
+
+        if (num > currentIndex) {
+            direction = 1;
+        } else {
+            direction = -1;
+        }
+
+        if (Math.abs(num - currentIndex) > sliderItems.length / 2) direction *= -1;
+
+        return direction;
+    }
+
+    function activateByIndex(index) {
+        sliderItems.forEach(item => item.className = 'slider__slide__item');
+
+        for (let i = 0; i < 3; ++i) {
+            sliderItems[(index + i) % sliderItems.length].classList.add('slider__slide__item_active' + (i + 1));
+        }
+
+        sliderItems[(index - 1 < 0 ? sliderItems.length - 1 : index - 1) % sliderItems.length].classList.add('slider__slide__item_prepare-l');
+        sliderItems[(index + 3) % sliderItems.length].classList.add('slider__slide__item_prepare-r');
+    }
+
+    function chooseRadioByIndex(index) {
         sliderRadio.forEach(radio => radio.classList.remove('slider__radio__item_active'));
 
-        e.target.classList.add('slider__radio__item_active');
+        for (let i = 0; i < sliderRadio.length; ++i) {
+            if (sliderRadio[i].dataset.num == currentIndex) {
+                sliderRadio[i].classList.add('slider__radio__item_active');
+            }
+        }
+    }
 
-        slides.forEach(slide => slide.classList.remove('slider__slide_active'));
+    function nextSlide() {
+        if (currentIndex + 1 >= sliderItems.length) currentIndex = 0;else currentIndex++;
 
-        slides[e.target.dataset.number].classList.add('slider__slide_active');
+        activateByIndex(currentIndex);
+        chooseRadioByIndex(currentIndex);
+    }
+
+    function prevSlide() {
+        if (currentIndex - 1 < 0) currentIndex = sliderItems.length - 1;else currentIndex--;
+
+        activateByIndex(currentIndex);
+        chooseRadioByIndex(currentIndex);
+    }
+
+    nextSlide();
+    let slideIntId = setInterval(nextSlide, 5500);
+
+    function choseRadioBtn(e) {
+        num = +e.target.dataset.num;
+        goAhead = true;
+
+        clearInterval(slideIntId);
+        slideIntId = setInterval(nextSlide, 5500);
+
+        sliderItems.forEach(item => {
+            item.style.transition = 2 * transTime / sliderItems.length + 's';
+        });
+
+        if (getDirection() == 1) {
+            nextSlide();
+        } else {
+            prevSlide();
+        }
     }
 
     /* slider 2 */
@@ -76,6 +183,43 @@
         nameField.focus();
     }
 
+    /*
+        let workWithItems = document.querySelectorAll('.block3__work-with-item');
+         let toCenter = document.querySelector('.block3__middle').clientWidth / 2;
+         let dist = Math.sqrt(
+            Math.pow(workWithItems[0].offsetTop + toCenter, 2) +
+            Math.pow(workWithItems[0].offsetLeft + toCenter, 2)
+        );
+         let angles = [];
+        workWithItems.forEach(item => {
+            let x = item.offsetLeft + toCenter,
+                y = item.offsetTop + toCenter;
+             let angle;
+             if (x > 0 && y >= 0)
+                angle = Math.atan(y / x);
+            else if (x > 0 && y < 0)
+                angle = Math.atan(y / x) + 2 * Math.PI;
+            else if (x < 0)
+                angle = Math.atan(y / x) + Math.PI;
+            else if (x == 0 && y > 0)
+                angle = Math.PI / 2;
+            else if (x == 0 && y < 0)
+                angle = 3 * Math.PI / 2;
+            else
+                console.log('Ошибка');
+              angles.push(angle);
+            console.log(angle * 180 / Math.PI)
+        });
+         function rotateItems() {
+            workWithItems.forEach((item, i) => {
+                item.style.left = toCenter + dist * Math.cos(angles[i] += 0.001) + 'px';
+                item.style.top = toCenter + dist * Math.sin(angles[i] += 0.001) + 'px';
+            });
+        }
+    */
+    //setInterval(rotateItems, 300);
+
+
     /* Анимации */
     let os = new OnScreen({
         tolerance: 0,
@@ -111,10 +255,10 @@
     /* b1 btn */
     anim('block1__btn', 1500);
 
-    animChildren('block2__table__content', 'block2__table__row', 140);
+    animChildren('block2__table__content', 'block2__table__row', 200);
 
     //anim('block3__title', 100);
-    animChildren('block3__middle', 'block3__work-with-item', 140);
+    animChildren('block3__middle__offers', 'block3__work-with-item', 140);
 
     animChildren('block3__work-with-systems', 'block3__work-with-systems__item', 200);
 
@@ -160,9 +304,52 @@
 
     function slider2Activate(_osSlider2) {
         _osSlider2.destroy();
-        console.log(1);
         setInterval(nextSlide2, 6000);
     }
 
-    osSlider2.on('enter', '.block6__slider', el => slider2Activate.bind(null, osSlider2));
+    osSlider2.on('enter', '.block6__slider', el => slider2Activate.bind(null, osSlider2)());
+
+    animChildren('block6__meet-us', 'block6__meet-us__item', 500);
+
+    /* Попарно */
+    os.on('enter', '.block6__meet-us', el => {
+        let itemArr = Array.from(el.children);
+
+        for (let i = 0; i < itemArr.length - 1; i += 2) {
+            addCl(itemArr[i], 'block6__meet-us__item', 200 * i);
+            addCl(itemArr[i + 1], 'block6__meet-us__item', 200 * i);
+        }
+    });
+
+    os.on('enter', '.block7__follow-us__row', el => {
+        let itemArr = Array.from(el.children);
+
+        itemArr.forEach((item, i) => {
+            if (item.children.length === 1) addCl(item, 'block7__follow-us__cell', 210 * i);
+        });
+    });
+
+    /* Parallax */
+    let coefParallax = .1,
+        offsetValue = 100;
+
+    let parallaxText = document.querySelector('.block5__bg-text');
+    parallaxText.style.transform = 'translateX(' + offsetValue + 'px)';
+
+    let textToTop = parallaxText.getBoundingClientRect().top;
+
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        scrollTop += document.body.clientHeight;
+
+        if (scrollTop > textToTop) {
+            let currentScroll = scrollTop - textToTop,
+                currentOffset = currentScroll * coefParallax;
+
+            if (currentOffset > offsetValue) currentOffset = offsetValue;
+
+            parallaxText.style.transform = 'translateX(' + (offsetValue - currentOffset) + 'px)';
+        }
+    });
 })();
