@@ -518,21 +518,21 @@ body {
   line-height: 100px;
   height: 100px;
   font-size: 0; }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1599px) {
     .main-header {
       margin-bottom: -100px; } }
   .main-header .container {
     height: 100px; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .main-header .container {
         height: 80px; } }
   .main-header__item {
     display: inline-block;
     font-size: 14px; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .main-header__item {
         font-size: 11.2px; } }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1599px) {
     .main-header {
       height: 80px;
       line-height: 80px; } }
@@ -557,7 +557,7 @@ body {
       font-size: 14px;
       margin-right: 70px;
       position: relative; }
-      @media screen and (max-width: 1600px) {
+      @media screen and (max-width: 1599px) {
         .menu__item {
           font-size: 11.2px; } }
       .menu__item:after {
@@ -580,14 +580,14 @@ body {
         text-align: center;
         letter-spacing: 3px;
         cursor: pointer; }
-        @media screen and (max-width: 1600px) {
+        @media screen and (max-width: 1599px) {
           .menu__item_login {
             width: 188px; } }
         .menu__item_login a {
           display: block;
           height: 100%;
           width: 100%; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .main-header__menu {
         height: 80px;
         line-height: 80px; } }
@@ -695,17 +695,31 @@ body {
 .double-shape {
   position: absolute;
   background: url("../img/shape-01.png") center no-repeat;
-  background-size: contain; }
+  background-size: cover; }
 
 .double-shape__left-size {
-  height: 350px;
-  width: 514.81481px;
-  left: -434.81481px; }
+  height: 380px;
+  width: 558.9418px;
+  left: -448.9418px;
+  background-position: right 0; }
+  @media screen and (min-width: 1600px) {
+    .double-shape__left-size {
+      left: -491.9418px; } }
+  @media screen and (min-width: 1920px) {
+    .double-shape__left-size {
+      left: -678.9418px; } }
 
 .double-shape__right-size {
   height: 420px;
-  width: 514.81481px;
-  right: -424.81481px; }
+  width: 558.9418px;
+  right: -468.9418px;
+  background-position: left 0; }
+  @media screen and (min-width: 1600px) {
+    .double-shape__right-size {
+      right: -581.9418px; } }
+  @media screen and (min-width: 1920px) {
+    .double-shape__right-size {
+      right: -731.9418px; } }
 
 .planetary {
   position: absolute;
@@ -895,7 +909,7 @@ body {
   height: 950px;
   overflow: hidden;
   background: linear-gradient(330deg, transparent, transparent 11%, rgba(0, 0, 0, 0.02) 11%, rgba(0, 0, 0, 0.02) 32%, transparent 32%, transparent 58%, rgba(0, 0, 0, 0.02) 58%, rgba(0, 0, 0, 0.02) 79%, transparent 79%, transparent), linear-gradient(127deg, #a0459c, #241aa8); }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1599px) {
     .block1 {
       height: 730px; } }
   .block1__container {
@@ -916,7 +930,7 @@ body {
     line-height: 63px;
     height: 63px;
     font-size: 0; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .block1__first {
         margin-top: -20px; } }
     .block1__first__item {
@@ -956,7 +970,7 @@ body {
     margin-bottom: 33px;
     position: relative;
     z-index: 1; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .block1__slogan2 {
         font-size: 54.4px;
         width: 564px; } }
@@ -1094,13 +1108,13 @@ body {
   margin-bottom: -70.5px;
   background: url("../img/waves-01.png") no-repeat;
   background-position: center 100%; }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1599px) {
     .block2 {
       height: 961.5px; } }
   .block2 .container {
     padding-top: 296.5px;
     position: relative; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .block2 .container {
         padding-top: 226.5px; } }
     .block2 .container:before {
@@ -1115,7 +1129,7 @@ body {
       top: 296.5px;
       left: 999px;
       z-index: 0; }
-      @media screen and (max-width: 1600px) {
+      @media screen and (max-width: 1599px) {
         .block2 .container:before {
           height: 224px;
           width: 224px; } }
@@ -1131,7 +1145,7 @@ body {
       top: 606.5px;
       left: 291px;
       z-index: 0; }
-      @media screen and (max-width: 1600px) {
+      @media screen and (max-width: 1599px) {
         .block2 .container:after {
           height: 160px;
           width: 160px; } }
@@ -1215,7 +1229,7 @@ body {
       text-decoration: none;
       color: #000;
       z-index: 2; }
-      @media screen and (max-width: 1600px) {
+      @media screen and (max-width: 1599px) {
         .block2__table__row {
           font-size: 14px; } }
       .block2__table__row:before {
@@ -1255,16 +1269,17 @@ body {
     .block2__table__cell {
       height: 70px;
       vertical-align: middle; }
-      @media screen and (max-width: 1600px) {
+      @media screen and (max-width: 1599px) {
         .block2__table__cell {
           height: 56px; } }
     .block2__table__num {
       width: 67px;
       text-align: center; }
     .block2__table__img {
-      padding-right: 20px;
-      height: 36px;
-      width: 36px; }
+      padding-right: 20px; }
+      .block2__table__img img {
+        height: 36px;
+        width: 36px; }
     .block2__table__name {
       color: #5f3ca3;
       line-height: 10px;
@@ -1291,7 +1306,7 @@ body {
 .block3 {
   height: 1301px;
   padding-top: 118px; }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1599px) {
     .block3 {
       padding-top: 48px;
       height: 1131px; } }
@@ -1320,7 +1335,7 @@ body {
     border-radius: 50%;
     top: 444px;
     left: 500px; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .block3__middle {
         top: 414px; } }
     .block3__middle__offers {
@@ -1420,7 +1435,7 @@ body {
         background-image: url("../img/logo-07.png"); }
       .block3__work-with-systems__item:last-child {
         margin-right: 0; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .block3__work-with-systems {
         top: 967px; } }
   .block3__shape1 {
@@ -1433,13 +1448,13 @@ body {
   background-image: linear-gradient(to right, #983893, #473fa9);
   position: relative;
   z-index: 2; }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1599px) {
     .block4 {
       height: 734px; } }
   .block4 .container {
     position: relative;
     padding-top: 120px; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .block4 .container {
         padding-top: 60px; } }
     .block4 .container:after {
@@ -1580,7 +1595,7 @@ body {
   height: 1536px;
   position: relative;
   z-index: 2; }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1599px) {
     .block5 {
       padding-top: 38px;
       height: 1356px; } }
@@ -1600,11 +1615,17 @@ body {
     top: 3926px;
     left: -246px;
     z-index: 4; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .block5__shape2 {
         height: 224px;
         width: 224px;
         top: 3312px; } }
+    @media screen and (min-width: 1600px) {
+      .block5__shape2 {
+        left: -280px; } }
+    @media screen and (min-width: 1920px) {
+      .block5__shape2 {
+        left: -443px; } }
   .block5__bg-text {
     position: absolute;
     font-weight: 900;
@@ -1747,7 +1768,7 @@ body {
       text-transform: uppercase; }
       .block5__table__hcell_publisher {
         padding-left: 30px;
-        width: 212px; }
+        width: 210px; }
       .block5__table__hcell__earnings {
         width: 134px; }
     .block5__table__content {
@@ -1815,9 +1836,15 @@ body {
     .block5__ava_1 {
       top: 142px;
       right: 752px; }
+      @media screen and (min-width: 1600px) {
+        .block5__ava_1 {
+          right: 832px; } }
     .block5__ava_2 {
       right: 660px;
       top: 288px; }
+      @media screen and (min-width: 1600px) {
+        .block5__ava_2 {
+          right: 700px; } }
     .block5__ava_3 {
       right: 544px;
       top: 112px; }
@@ -1827,9 +1854,15 @@ body {
     .block5__ava_5 {
       left: 659px;
       top: 112px; }
+      @media screen and (min-width: 1600px) {
+        .block5__ava_5 {
+          left: 699px; } }
     .block5__ava_6 {
       left: 751px;
       top: 234px; }
+      @media screen and (min-width: 1600px) {
+        .block5__ava_6 {
+          left: 831px; } }
 
 .block6 {
   height: 1650px;
@@ -1840,7 +1873,7 @@ body {
   background-image: url("../img/map.svg");
   background-position: center bottom 25px;
   background-repeat: no-repeat; }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1599px) {
     .block6 {
       padding-top: 400px;
       height: 1430px;
@@ -1994,7 +2027,7 @@ body {
     position: absolute;
     top: 655px;
     width: 100%; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1599px) {
       .block6__part2 {
         top: 515px; } }
   .block6__title2 {
@@ -2333,19 +2366,10 @@ body {
             transform: scale(1.1);
     box-shadow: 0 15px 35px 0 rgba(78, 49, 177, 0.1); }
 
-/*
-.block3__middle__offers {
-    animation: someRotate 40s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
-}
-
-.block3__work-with-item {
-    animation: someRotate 40s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite reverse;
-}
-*/
 .block2__alloffers {
   transition: .2s; }
   .block2__alloffers:hover {
-    box-shadow: inset 0 0 0 30px #5e3ca3; }
+    background-color: #5e3ca3; }
     .block2__alloffers:hover a {
       color: #fff; }
       .block2__alloffers:hover a:after {
@@ -2354,8 +2378,6 @@ body {
 .block4__earning {
   transition: .2s; }
   .block4__earning:hover {
-    box-shadow: inset 0 0 0 30px #fb7d4a; }
+    background-color: #fff; }
     .block4__earning:hover a {
-      color: #fff; }
-      .block4__earning:hover a:after {
-        border-color: transparent transparent transparent #fff; }
+      color: #fb7d4a; }
