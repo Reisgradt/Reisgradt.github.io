@@ -107,6 +107,8 @@ os.on('enter', '.block7__follow-us__row', el => {
     });
 });
 
+animChildren('l-img__container', 'l-img__icon', 500);
+
 /* login */
 let loginBtn = document.querySelector('.menu__item_login'),
     isShown = false;
