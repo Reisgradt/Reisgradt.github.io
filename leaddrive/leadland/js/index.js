@@ -12,12 +12,12 @@ function anim(cl, time) {
     os.on('enter', '.' + cl, el => addCl(el, cl, time));
 }
 
-function animChildren(cl, chcl, timeDelay) {
+function animChildren(cl, chcl, timeDelay, startDelay) {
     os.on('enter', '.' + cl, el => {
         let i = 0;
         Array.from(el.children).forEach(child => {
             if (child.classList.contains(chcl)) {
-                addCl(child, chcl, timeDelay * i);
+                addCl(child, chcl, timeDelay * i + startDelay);
                 i++;
             }
         });
@@ -107,7 +107,7 @@ os.on('enter', '.block7__follow-us__row', el => {
     });
 });
 
-animChildren('l-img__container', 'l-img__icon', 500);
+animChildren('l-img__container', 'l-img__icon', 300, 1500);
 
 /* login */
 let loginBtn = document.querySelector('.menu__item_login'),
