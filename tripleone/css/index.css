@@ -450,7 +450,10 @@ a {
   padding: 0 30px;
   min-width: 167px;
   height: 50px;
-  color: #fff; }
+  color: #fff;
+  transition: 0.3s; }
+  .btn:hover {
+    background: #46bcff; }
   .btn_more:after {
     content: '';
     height: 8px;
@@ -464,6 +467,8 @@ a {
   .btn_2 {
     background: #0b35d6;
     box-shadow: 0 15px 25px 0 rgba(11, 53, 214, 0.3); }
+    .btn_2:hover {
+      background: #1b47f1; }
 
 .login-btn {
   letter-spacing: 1px;
@@ -476,13 +481,17 @@ a {
   font-size: 14px;
   text-transform: uppercase;
   padding: 0 30px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.3s; }
+  .login-btn:hover {
+    border: solid 2px #fff; }
 
 .block {
   height: 1000px; }
+  .block .container {
+    padding-top: 341px; }
 
 .content-wrapper {
-  padding-top: 341px;
   width: 454px;
   display: inline-block;
   position: relative;
@@ -511,6 +520,29 @@ a {
   line-height: 32px;
   margin-bottom: 40px;
   opacity: .7; }
+
+.b-img {
+  height: 500px;
+  width: 620px;
+  position: absolute;
+  top: 50%;
+  margin-top: -250px; }
+  .b-img:before {
+    content: '';
+    height: 1000px;
+    width: 1000px;
+    background: linear-gradient(-30deg, transparent, transparent 100px, #3b4348 100px, #3b4348 101px, transparent 101px, transparent);
+    z-index: -1;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -500px; }
+
+.b-img-r .b-img {
+  left: 552px; }
+
+.b-img-l .b-img {
+  right: 552px; }
 
 *,
 *:before,
@@ -590,7 +622,8 @@ body {
 
 .footer {
   height: 510px;
-  background: linear-gradient(118deg, #0e0acb, #00d1ff);
+  background: url("../img/header-pattern-01.svg") right bottom, url("../img/header-pattern-02.svg") left top, url("../img/header-pattern-03.svg") left 8.85% bottom, url("../img/header-pattern-04.svg") right 26.71% top, url("../img/header-pattern-05.svg") left 32.08% top, linear-gradient(118deg, #0e0acb, #00d1ff);
+  background-repeat: no-repeat;
   text-align: center; }
   .footer .header {
     padding-top: 0;
@@ -637,7 +670,8 @@ body {
     opacity: .4; }
 
 .b1 {
-  background: linear-gradient(118deg, #0e0acb, #00d1ff);
+  background: url("../img/header-pattern-01.svg") right bottom, url("../img/header-pattern-02.svg") left top, url("../img/header-pattern-03.svg") left 8.85% bottom, url("../img/header-pattern-04.svg") right 26.71% top, url("../img/header-pattern-05.svg") left 32.08% top, linear-gradient(118deg, #0e0acb, #00d1ff);
+  background-repeat: no-repeat;
   position: relative; }
   .b1:after {
     content: '';
@@ -657,7 +691,9 @@ body {
     width: 100%; }
 
 .b2 {
-  background: #fff; }
+  background: url("../img/body-pattern-06.svg") left top 433px, url("../img/body-pattern-07.svg") right top 392px, #fff;
+  background-repeat: no-repeat; }
 
 .b3 {
-  background: #f5f7fa; }
+  background: url("../img/body-pattern-06.svg") left top 433px, url("../img/body-pattern-07.svg") right top 392px, #f5f7fa;
+  background-repeat: no-repeat; }
