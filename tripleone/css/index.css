@@ -451,7 +451,8 @@ a {
   min-width: 167px;
   height: 50px;
   color: #fff;
-  transition: 0.3s; }
+  transition: 0.3s;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
   .btn:hover {
     background: #46bcff; }
   .btn_more:after {
@@ -487,7 +488,8 @@ a {
     border: solid 2px #fff; }
 
 .block {
-  height: 1000px; }
+  height: 1000px;
+  overflow: hidden; }
   .block .container {
     padding-top: 341px; }
 
@@ -496,6 +498,16 @@ a {
   display: inline-block;
   position: relative;
   text-align: left; }
+  .content-wrapper:after {
+    content: '';
+    height: 1200px;
+    width: 1200px;
+    background: linear-gradient(-60deg, transparent, transparent 592px, rgba(59, 67, 72, 0.09) 592px, rgba(59, 67, 72, 0.09) 593px, transparent 593px, transparent);
+    z-index: 0;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    margin-top: -600px; }
 
 .b-left {
   text-align: left; }
@@ -525,23 +537,20 @@ a {
   height: 500px;
   width: 620px;
   position: absolute;
+  z-index: 1;
   top: 50%;
   margin-top: -250px; }
-  .b-img:before {
-    content: '';
-    height: 1000px;
-    width: 1000px;
-    background: linear-gradient(-30deg, transparent, transparent 100px, #3b4348 100px, #3b4348 101px, transparent 101px, transparent);
-    z-index: -1;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    margin-top: -500px; }
 
 .b-img-r .b-img {
   left: 552px; }
 
+.b-img-r:after {
+  right: -722px; }
+
 .b-img-l .b-img {
+  right: 552px; }
+
+.b-img-l:after {
   right: 552px; }
 
 *,
@@ -622,9 +631,12 @@ body {
 
 .footer {
   height: 510px;
-  background: url("../img/header-pattern-01.svg") right bottom, url("../img/header-pattern-02.svg") left top, url("../img/header-pattern-03.svg") left 8.85% bottom, url("../img/header-pattern-04.svg") right 26.71% top, url("../img/header-pattern-05.svg") left 32.08% top, linear-gradient(118deg, #0e0acb, #00d1ff);
+  background: url("../img/header-pattern-01.svg") right bottom, url("../img/header-pattern-02.svg") left top, url("../img/header-pattern-03.svg") left 8.85% bottom, linear-gradient(118deg, #0e0acb, #00d1ff);
   background-repeat: no-repeat;
   text-align: center; }
+  .footer .container {
+    background: url("../img/header-pattern-04.svg") right 12.28% top, url("../img/header-pattern-05.svg") left 19.82% top;
+    background-repeat: no-repeat; }
   .footer .header {
     padding-top: 0;
     margin-bottom: 52px; }
@@ -672,9 +684,14 @@ body {
     display: none; }
 
 .b1 {
-  background: url("../img/header-pattern-01.svg") right bottom, url("../img/header-pattern-02.svg") left top, url("../img/header-pattern-03.svg") left 8.85% bottom, url("../img/header-pattern-04.svg") right 26.71% top, url("../img/header-pattern-05.svg") left 32.08% top, linear-gradient(118deg, #0e0acb, #00d1ff);
+  background: url("../img/header-pattern-01.svg") right bottom, url("../img/header-pattern-02.svg") left top, url("../img/header-pattern-03.svg") left 8.85% bottom, linear-gradient(118deg, #0e0acb, #00d1ff);
   background-repeat: no-repeat;
   position: relative; }
+  .b1 .container {
+    background: url("../img/header-pattern-04.svg") right 12.28% top, url("../img/header-pattern-05.svg") left 19.82% top;
+    background-repeat: no-repeat; }
+  .b1 .btn {
+    box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.05); }
   .b1:after {
     content: '';
     height: 43px;
@@ -698,4 +715,5 @@ body {
 
 .b3 {
   background: url("../img/body-pattern-06.svg") left top 433px, url("../img/body-pattern-07.svg") right top 392px, #f5f7fa;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 1143px; }
