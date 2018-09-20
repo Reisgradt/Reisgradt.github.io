@@ -692,6 +692,8 @@ body {
     background-repeat: no-repeat; }
   .b1 .btn {
     box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.05); }
+  .b1 .content-wrapper:after {
+    display: none; }
   .b1:after {
     content: '';
     height: 43px;
