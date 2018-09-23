@@ -656,7 +656,7 @@ html {
   flex-direction: column; }
   @media screen and (min-width: 375px) and (max-width: 1140px) {
     html {
-      min-height: 740px;
+      min-height: 900px;
       min-width: 375px; } }
 
 body {
@@ -691,6 +691,9 @@ body {
   .wrapper .logo {
     display: inline-block;
     margin-bottom: 40px; }
+  @media screen and (min-width: 375px) and (max-width: 943px) {
+    .wrapper {
+      padding: 80px 0; } }
 
 .content {
   margin: 0 auto;
