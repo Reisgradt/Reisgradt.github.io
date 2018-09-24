@@ -421,6 +421,12 @@ a {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
 /* Главная часть сайта */
 /* Main */
 .light-block {
@@ -529,18 +535,21 @@ a {
   font-weight: 900;
   font-family: GothamPro;
   line-height: 29px;
-  margin-bottom: 31px; }
+  margin-bottom: 31px;
+  text-align: left; }
 
 .b-descr {
   font-size: 20px;
   line-height: 32px;
-  margin-bottom: 21px; }
+  margin-bottom: 21px;
+  text-align: left; }
 
 .b-text {
   font-size: 16px;
   line-height: 32px;
   margin-bottom: 40px;
-  opacity: .7; }
+  opacity: .7;
+  text-align: left; }
 
 .b-img {
   height: 500px;
@@ -549,6 +558,12 @@ a {
   z-index: 1;
   top: 50%;
   margin-top: -250px; }
+  @media screen and (min-width: 375px) and (max-width: 1140px) {
+    .b-img {
+      margin-top: 0;
+      left: 0;
+      right: 0;
+      position: relative; } }
 
 .b-img-r .b-img {
   left: 552px; }
@@ -717,7 +732,8 @@ body {
   height: 510px;
   background: url("../img/header-pattern-01.svg") right bottom, url("../img/header-pattern-02.svg") left top, url("../img/header-pattern-03.svg") left 8.85% bottom, linear-gradient(118deg, #0e0acb, #00d1ff);
   background-repeat: no-repeat;
-  text-align: center; }
+  text-align: center;
+  color: #fff; }
   .footer .container {
     background: url("../img/header-pattern-04.svg") right 12.28% top, url("../img/header-pattern-05.svg") left 19.82% top;
     background-repeat: no-repeat; }
