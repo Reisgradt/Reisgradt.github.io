@@ -557,13 +557,15 @@ a {
   position: absolute;
   z-index: 1;
   top: 50%;
-  margin-top: -250px; }
-  @media screen and (min-width: 375px) and (max-width: 1140px) {
-    .b-img {
-      margin-top: 0;
-      left: 0;
-      right: 0;
-      position: relative; } }
+  margin-top: -250px;
+  /*
+    @media screen and (min-width: 375px) and (max-width: $default-main-width) {
+        margin-top: 0;
+        left: 0;
+        right: 0;
+        position: relative;
+    }
+    */ }
 
 .b-img-r .b-img {
   left: 552px; }
@@ -816,3 +818,17 @@ body {
   background: url("../img/body-pattern-06.svg") left top 433px, url("../img/body-pattern-07.svg") right top 392px, #f5f7fa;
   background-repeat: no-repeat;
   height: 1143px; }
+
+.img1 .b-img {
+  height: 515px;
+  width: 794px;
+  margin-left: -90px; }
+
+.img2 .b-img {
+  height: 600px;
+  width: 600px; }
+
+.img3 .b-img {
+  height: 509px;
+  width: 737px;
+  margin-left: -40px; }
