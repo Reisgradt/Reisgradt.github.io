@@ -558,6 +558,7 @@ a {
   z-index: 1;
   top: 50%;
   margin-top: -250px;
+  background: center no-repeat;
   /*
     @media screen and (min-width: 375px) and (max-width: $default-main-width) {
         margin-top: 0;
