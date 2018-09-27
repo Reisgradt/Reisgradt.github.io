@@ -113,6 +113,8 @@
 
     let sidebarItems = document.querySelectorAll('.sidebar__list__item');
 
+    let currIt = sidebarItems[0];
+
     function resetSidebarStyles() {
         sidebarItems.forEach(item => item.classList.remove('sidebar__list__item_active'));
     }

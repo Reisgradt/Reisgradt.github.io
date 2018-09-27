@@ -463,7 +463,7 @@ a {
   min-width: 167px;
   height: 50px;
   color: #fff;
-  transition: 0.3s;
+  transition: background 0.3s;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   border: none;
   outline: none;
@@ -501,6 +501,9 @@ a {
   transition: 0.3s; }
   .login-btn:hover {
     border: solid 2px #fff; }
+  @media screen and (max-width: 800px) {
+    .login-btn {
+      display: none !important; } }
 
 .block {
   height: 1000px;
