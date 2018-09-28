@@ -744,6 +744,9 @@ body {
   .content__img {
     height: 300px;
     width: 352px;
+    background: url("../img/illustration-cs.svg") center no-repeat;
+    background-size: contain;
+    display: inline-block;
     order: 1;
     border-radius: 8px; }
     @media screen and (min-width: 375px) and (max-width: 943px) {
