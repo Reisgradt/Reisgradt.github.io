@@ -948,7 +948,7 @@ body {
       opacity: .7; }
       @media screen and (max-width: 800px) {
         .footer__links__link {
-          margin-right: 16px; } }
+          margin-right: 14px; } }
       .footer__links__link:last-child {
         margin-right: 0; }
   .footer .header__menu__item:before {
