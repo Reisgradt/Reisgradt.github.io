@@ -584,8 +584,8 @@ a {
   right: 552px; }
 
 .logo {
-  width: 121px;
-  height: 22px;
+  width: 125px;
+  height: 14px;
   background: url("../img/logo.svg") center no-repeat; }
 
 .footer-year {
@@ -599,7 +599,6 @@ a {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 30px;
-  font-weight: bold;
   line-height: 17px; }
 
 .form-input {
@@ -770,3 +769,17 @@ body {
       line-height: 11px; }
     .content__form .btn {
       width: 100%; }
+
+.soon-2__icon {
+  height: 30px;
+  width: 30px;
+  background: url("../img/icon-04.svg") center no-repeat;
+  display: inline-block; }
+
+.soon-2__title {
+  margin-bottom: 9px; }
+
+.soon-2__descr {
+  width: 265px;
+  line-height: 43px;
+  display: inline-block; }

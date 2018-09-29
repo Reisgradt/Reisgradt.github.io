@@ -584,8 +584,8 @@ a {
   right: 552px; }
 
 .logo {
-  width: 121px;
-  height: 22px;
+  width: 125px;
+  height: 14px;
   background: url("../img/logo.svg") center no-repeat; }
 
 .footer-year {
@@ -599,7 +599,6 @@ a {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 30px;
-  font-weight: bold;
   line-height: 17px; }
 
 .form-input {
@@ -778,8 +777,9 @@ body {
     display: none; }
     .header .header__mob-icon__input {
       display: none; }
-      .header .header__mob-icon__input:checked + .header__menu {
-        display: none; }
+      @media screen and (max-width: 800px) {
+        .header .header__mob-icon__input:checked + .header__menu {
+          display: none; } }
     @media screen and (max-width: 800px) {
       .header .header__mob-icon {
         height: 16px;

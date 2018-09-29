@@ -584,8 +584,8 @@ a {
   right: 552px; }
 
 .logo {
-  width: 121px;
-  height: 22px;
+  width: 125px;
+  height: 14px;
   background: url("../img/logo.svg") center no-repeat; }
 
 .footer-year {
@@ -599,7 +599,6 @@ a {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 30px;
-  font-weight: bold;
   line-height: 17px; }
 
 .form-input {
@@ -786,8 +785,9 @@ body {
     display: none; }
     .header .header__mob-icon__input {
       display: none; }
-      .header .header__mob-icon__input:checked + .header__menu {
-        display: none; }
+      @media screen and (max-width: 800px) {
+        .header .header__mob-icon__input:checked + .header__menu {
+          display: none; } }
     @media screen and (max-width: 800px) {
       .header .header__mob-icon {
         height: 16px;
@@ -1003,11 +1003,13 @@ body {
 .policy-item {
   padding: 61px 0 49px;
   position: relative;
-  font-size: 0;
-  text-align: justify; }
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row; }
   @media screen and (max-width: 800px) {
     .policy-item {
       text-align: center;
+      display: block;
       padding: 40px 20px 29px; } }
   .policy-item:before {
     content: '';
@@ -1017,10 +1019,6 @@ body {
     background-color: rgba(59, 67, 72, 0.12);
     left: 0;
     bottom: 0; }
-  .policy-item:after {
-    content: '';
-    display: inline-block;
-    width: 100%; }
   .policy-item:first-child {
     padding-top: 0; }
   .policy-item:last-child {
@@ -1037,7 +1035,7 @@ body {
       .policy-item__img {
         margin-bottom: 40px; } }
   .policy-item__inline {
-    width: 846px;
+    width: 830px;
     display: inline-block;
     text-align: left;
     vertical-align: top; }
@@ -1080,7 +1078,8 @@ body {
       padding: 0; } }
 
 .secure-block {
-  text-align: center; }
+  text-align: center;
+  display: block; }
 
 .secure-list__item {
   display: inline-block;
@@ -1134,3 +1133,6 @@ body {
     @media screen and (max-width: 800px) {
       .secure-list__item__text {
         width: auto; } }
+
+.policy-img-r {
+  order: 2; }

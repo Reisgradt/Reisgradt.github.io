@@ -106,22 +106,39 @@
 })();
 
 (function () {
-    let os = new OnScreen({
-        tolerance: 0,
-        debounce: 0
-    });
+    function getCoords(elem) {
+        // кроме IE8-
+        var box = elem.getBoundingClientRect();
 
-    let sidebarItems = document.querySelectorAll('.sidebar__list__item');
-
-    let currIt = sidebarItems[0];
-
-    function resetSidebarStyles() {
-        sidebarItems.forEach(item => item.classList.remove('sidebar__list__item_active'));
+        return {
+            top: box.top + window.pageYOffset,
+            left: box.left + window.pageXOffset
+        };
     }
 
-    os.on('enter', '.nation-item', el => {
-        resetSidebarStyles();
+    function removeActive() {
+        document.querySelectorAll('.sidebar__list__item').forEach(a => {
+            a.classList.remove('sidebar__list__item_active');
+        });
+    }
 
-        document.querySelector('.sidebar__list__item[data-id=' + el.id + ']').classList.add('sidebar__list__item_active');
-    });
+    function onScroll() {
+        let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+        document.querySelectorAll('.sidebar__list__item').forEach(a => {
+            let hash = a.dataset.id;
+            let target = document.getElementById(hash);
+            let top = getCoords(target).top;
+            let height = target.offsetWidth;
+
+            if (top <= scrolled && top + height > scrolled) {
+                removeActive();
+                a.classList.add('sidebar__list__item_active');
+            } else {
+                a.classList.remove('sidebar__list__item_active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', onScroll);
 })();
