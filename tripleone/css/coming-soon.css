@@ -770,16 +770,17 @@ body {
     .content__form .btn {
       width: 100%; }
 
-.soon-2__icon {
-  height: 30px;
-  width: 30px;
-  background: url("../img/icon-04.svg") center no-repeat;
-  display: inline-block; }
-
-.soon-2__title {
-  margin-bottom: 9px; }
-
-.soon-2__descr {
-  width: 265px;
-  line-height: 43px;
-  display: inline-block; }
+.soon-2 {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .soon-2__icon {
+    height: 30px;
+    width: 30px;
+    background: url("../img/icon-04.svg") center no-repeat;
+    display: inline-block; }
+  .soon-2__descr {
+    width: 265px;
+    line-height: 32px;
+    display: inline-block; }
