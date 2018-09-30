@@ -602,7 +602,8 @@ a {
   line-height: 17px; }
 
 .form-input {
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .form-input input {
     height: 50px;
     width: 100%;
