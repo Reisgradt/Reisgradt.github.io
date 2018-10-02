@@ -70,7 +70,7 @@
 
     function smoothScroll(eID) {
         var startY = currentYPosition();
-        var stopY = elmYPosition(eID);
+        var stopY = elmYPosition(eID) + 10; // Чуть больше
         var distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < 100) {
             scrollTo(0, stopY);
@@ -129,7 +129,7 @@
             let hash = a.dataset.id;
             let target = document.getElementById(hash);
             let top = getCoords(target).top;
-            let height = target.offsetWidth;
+            let height = target.offsetHeight;
 
             if (top <= scrolled && top + height > scrolled) {
                 removeActive();
