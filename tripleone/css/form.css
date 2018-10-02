@@ -695,7 +695,13 @@ body {
     content: ''; }
 
 .container {
-  margin: 30px 0; }
+  margin: 30px 0;
+  display: inline-block; }
+
+.container,
+.footer,
+.wrapper {
+  min-width: 470px; }
 
 .wrapper {
   text-align: center; }
