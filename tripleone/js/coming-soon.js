@@ -4,24 +4,18 @@
     btn.addEventListener('click', nextContent);
 
     function nextContent() {
-        let hide = () => {
+        let hide = function () {
             document.querySelector('.content__img').style.opacity = 0;
             document.querySelector('.content__form').style.opacity = 0;
             document.querySelector('.content').classList.add('content_hide-line');
         };
 
-        let remove = () => {
-            /*
-            document.querySelector('.content__img')
-                .style.display = 'none';
-            document.querySelector('.content__form')
-                .style.display = 'none';
-            */
+        let remove = function () {
             document.querySelector('.content__img').style.transform = 'scale(0)';
             document.querySelector('.content__form').style.transform = 'scale(0)';
         };
 
-        let show = () => {
+        let show = function () {
             document.querySelector('.content__img').style.display = 'none';
             document.querySelector('.content__form').style.display = 'none';
 

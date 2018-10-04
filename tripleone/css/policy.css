@@ -508,8 +508,14 @@ a {
 .block {
   height: 1000px;
   overflow: hidden; }
+  @media screen and (max-width: 800px) {
+    .block {
+      height: auto; } }
   .block .container {
     padding-top: 341px; }
+    @media screen and (max-width: 800px) {
+      .block .container {
+        padding: 0; } }
 
 .content-wrapper {
   width: 454px;
@@ -517,6 +523,11 @@ a {
   position: relative;
   text-align: left;
   z-index: 0; }
+  @media screen and (max-width: 800px) {
+    .content-wrapper {
+      display: block;
+      width: 100%;
+      padding: 40px; } }
   .content-wrapper:after {
     content: '';
     height: 1200px;
@@ -526,6 +537,9 @@ a {
     z-index: -1;
     top: 50%;
     margin-top: -600px; }
+    @media screen and (max-width: 800px) {
+      .content-wrapper:after {
+        display: none; } }
 
 .b-left {
   text-align: left; }
@@ -562,14 +576,7 @@ a {
   top: 50%;
   margin-top: -250px;
   background: center no-repeat;
-  /*
-    @media screen and (min-width: 375px) and (max-width: $default-main-width) {
-        margin-top: 0;
-        left: 0;
-        right: 0;
-        position: relative;
-    }
-    */ }
+  background-size: contain; }
 
 .b-img-r .b-img {
   left: 552px; }
@@ -715,7 +722,10 @@ body {
   box-sizing: content-box;
   padding: 20px 0;
   z-index: 15;
-  position: relative; }
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; }
   @media screen and (max-width: 800px) {
     .header {
       background: #fff;
@@ -723,7 +733,8 @@ body {
       padding: 0 20px;
       box-sizing: border-box;
       box-shadow: 0 70px 120px 0 rgba(18, 51, 78, 0.15);
-      position: relative; } }
+      position: fixed;
+      top: 0; } }
   @media screen and (max-width: 800px) {
     .header .logo {
       background-image: url("../img/logo(1).svg");
@@ -986,15 +997,6 @@ body {
   @media screen and (max-width: 800px) {
     .header-block {
       min-width: 375px; } }
-  .header-block .header {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%; }
-    @media screen and (max-width: 800px) {
-      .header-block .header {
-        position: fixed;
-        top: 0; } }
   .header-block .container {
     padding-top: 230px;
     padding-bottom: 150px; }

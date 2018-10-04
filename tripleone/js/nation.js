@@ -1,11 +1,13 @@
 (function () {
     var a = document.getElementById('sidebar'),
         b = null,
-        P = 20; // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
+        P = 20;
+
     window.addEventListener('scroll', Ascroll, false);
     document.body.addEventListener('scroll', Ascroll, false);
 
     function Ascroll() {
+
         if (b == null) {
             var Sa = getComputedStyle(a, ''),
                 s = '';
@@ -26,7 +28,8 @@
             a.style.border = '0';
         }
         var Ra = a.getBoundingClientRect(),
-            R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.footer__container').getBoundingClientRect().top + 20); // селектор блока, при достижении верхнего края которого нужно открепить прилипающий элемент;  Math.round() только для IE; если ноль заменить на число, то блок будет прилипать до того, как нижний край элемента дойдёт до футера
+            R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.footer__container').getBoundingClientRect().top + 20);
+
         if (Ra.top - P <= 0) {
             if (Ra.top - P <= R) {
                 b.className = 'stop';
@@ -141,4 +144,14 @@
     }
 
     window.addEventListener('scroll', onScroll);
+})();
+
+(function () {
+    let sidebar = document.querySelector('#sidebar > div');
+
+    window.addEventListener('scroll', () => {
+        let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        sidebar.style.transform = 'translateX(-' + scrollLeft + 'px)';
+    });
 })();

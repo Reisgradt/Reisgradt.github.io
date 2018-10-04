@@ -508,8 +508,14 @@ a {
 .block {
   height: 1000px;
   overflow: hidden; }
+  @media screen and (max-width: 800px) {
+    .block {
+      height: auto; } }
   .block .container {
     padding-top: 341px; }
+    @media screen and (max-width: 800px) {
+      .block .container {
+        padding: 0; } }
 
 .content-wrapper {
   width: 454px;
@@ -517,6 +523,11 @@ a {
   position: relative;
   text-align: left;
   z-index: 0; }
+  @media screen and (max-width: 800px) {
+    .content-wrapper {
+      display: block;
+      width: 100%;
+      padding: 40px; } }
   .content-wrapper:after {
     content: '';
     height: 1200px;
@@ -526,6 +537,9 @@ a {
     z-index: -1;
     top: 50%;
     margin-top: -600px; }
+    @media screen and (max-width: 800px) {
+      .content-wrapper:after {
+        display: none; } }
 
 .b-left {
   text-align: left; }
@@ -562,14 +576,7 @@ a {
   top: 50%;
   margin-top: -250px;
   background: center no-repeat;
-  /*
-    @media screen and (min-width: 375px) and (max-width: $default-main-width) {
-        margin-top: 0;
-        left: 0;
-        right: 0;
-        position: relative;
-    }
-    */ }
+  background-size: contain; }
 
 .b-img-r .b-img {
   left: 552px; }
@@ -671,17 +678,17 @@ a {
   box-sizing: inherit; }
 
 html {
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%; }
+  box-sizing: border-box; }
 
 body {
-  height: 100%;
-  width: 100%;
   background: #fff;
   color: #fff;
   font-family: Roboto;
-  font-size: 16px; }
+  font-size: 16px;
+  min-width: 1160px; }
+  @media screen and (max-width: 800px) {
+    body {
+      min-width: 375px; } }
 
 .container {
   width: 1140px;
@@ -702,7 +709,10 @@ body {
   box-sizing: content-box;
   padding: 20px 0;
   z-index: 15;
-  position: relative; }
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; }
   @media screen and (max-width: 800px) {
     .header {
       background: #fff;
@@ -710,7 +720,8 @@ body {
       padding: 0 20px;
       box-sizing: border-box;
       box-shadow: 0 70px 120px 0 rgba(18, 51, 78, 0.15);
-      position: relative; } }
+      position: fixed;
+      top: 0; } }
   @media screen and (max-width: 800px) {
     .header .logo {
       background-image: url("../img/logo(1).svg");
@@ -957,13 +968,19 @@ body {
   .b1 .container {
     background: url("../img/header-pattern-04.svg") right 12.28% top, url("../img/header-pattern-05.svg") left 19.82% top;
     background-repeat: no-repeat; }
+  @media screen and (max-width: 800px) {
+    .b1 {
+      font-size: 30px;
+      background: url("../img/mobile-pattern-01.svg") left -4px bottom, url("../img/mobile-pattern-02.svg") right bottom, linear-gradient(118deg, #0e0acb, #00d1ff);
+      background-repeat: no-repeat; } }
+  .b1 .container {
+    position: relative; }
+    @media screen and (max-width: 800px) {
+      .b1 .container {
+        background: none;
+        padding-top: 50px; } }
   .b1 .btn {
     box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.05); }
-  .b1 .header {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%; }
   .b1 .content-wrapper:after {
     display: none; }
   .b1:after {
@@ -975,8 +992,9 @@ body {
     left: 50%;
     margin-left: -8px;
     bottom: 35px; }
-  .b1 .container {
-    position: relative; }
+    @media screen and (max-width: 800px) {
+      .b1:after {
+        display: none; } }
 
 .b2 {
   background: url("../img/body-pattern-06.svg") left top 433px, url("../img/body-pattern-07.svg") right top 392px, #fff;
@@ -986,17 +1004,54 @@ body {
   background: url("../img/body-pattern-06.svg") left top 433px, url("../img/body-pattern-07.svg") right top 392px, #f5f7fa;
   background-repeat: no-repeat;
   height: 1143px; }
+  @media screen and (max-width: 800px) {
+    .b3 {
+      height: auto;
+      padding-bottom: 175.5px; } }
 
 .img1 .b-img {
   height: 515px;
   width: 794px;
   margin-left: -90px; }
+  @media screen and (max-width: 800px) {
+    .img1 .b-img {
+      margin: 0;
+      margin-bottom: 40px;
+      padding-bottom: 64.86146%;
+      height: auto;
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      left: 0;
+      top: 0; } }
 
 .img2 .b-img {
   height: 600px;
   width: 600px; }
+  @media screen and (max-width: 800px) {
+    .img2 .b-img {
+      margin: 0;
+      margin-bottom: 40px;
+      padding-bottom: 100%;
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: inline-block;
+      left: 0;
+      top: 0; } }
 
 .img3 .b-img {
   height: 509px;
   width: 737px;
   margin-left: -40px; }
+  @media screen and (max-width: 800px) {
+    .img3 .b-img {
+      margin: 0;
+      margin-bottom: 40px;
+      padding-bottom: 69.06377%;
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: inline-block;
+      left: 0;
+      top: 0; } }
