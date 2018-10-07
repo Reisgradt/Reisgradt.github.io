@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-    <title>TripleOne Login
+    <title>TripleOne Verification
     </title>
     <link rel="stylesheet" href="js/lib/css/intlTelInput.min.css"/>
     <link rel="stylesheet" href="css/form.css"/>
@@ -16,19 +16,24 @@
       <div class="wrapper">
         <div class="content">
           <div class="login-img"></div>
-          <div class="login-title"> LogIn
+          <div class="login-title"> Verify Phone Number
           </div>
-          <div class="form-input login-margin-1">
-            <input placeholder="Your email"/>
+          <div class="form-input form-phone login-margin-1">
+            <input placeholder="Verify Phone Number" id="phone"/>
           </div>
-          <div class="form-input login-margin-2">
-            <input placeholder="Password"/>
+          <div class="radio-container login-margin-1">
+            <label class="custom-radio">
+              <input type="radio" name="code"/><span>SMS code</span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="code"/><span>Call me</span>
+            </label>
           </div>
-          <button class="btn">next</button>
+          <button class="btn">SEND VERIFY CODE</button>
         </div>
       </div>
       <div class="wrapper">
-        <div class="have-account"> Don’t have account? <a href="">SignUp</a>
+        <div class="have-account"> I have account! <a href="">SignIn</a>
         </div>
       </div>
     </div>
