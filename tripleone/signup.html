@@ -12,11 +12,35 @@
         <div class="logo logo-2"></div>
       </div>
       <div class="wrapper">
-        <div class="content content_flex"> 
-          <div class="login-img"></div>
-          <div class="login-right-side">
-            <div class="login-title">Sign Up</div>
-          </div>
+        <div class="content_flex"> 
+          <div class="login-img-2"></div>
+          <form class="login-right-side" method="post">
+            <div class="login-title login-margin-2">Sign Up</div>
+            <div class="custom-select login-margin-1">
+              <select class="custom-select__select" name="country">
+                <option disabled="disabled" selected="selected">Country
+                  <option value="0">UA</option>
+                  <option value="1">USA</option>
+                  <option value="2">AU</option>
+                </option>
+              </select>
+              <div class="custom-select__choosen">Traffic type </div>
+              <div class="custom-select__container"></div>
+            </div>
+            <div class="form-input login-margin-1">
+              <input placeholder="Email"/>
+            </div>
+            <div class="form-input login-margin-1">
+              <input placeholder="Create your password" type="password"/>
+            </div>
+            <div class="form-input login-margin-1">
+              <input placeholder="Confirm your password" type="password"/>
+            </div>
+            <div class="form-input login-margin-2">
+              <input placeholder="Invitation code"/>
+            </div>
+            <button class="btn">CONTINUE</button>
+          </form>
         </div>
       </div>
       <div class="wrapper">
@@ -27,6 +51,9 @@
     <div class="footer"> 
       <div class="footer-year">© 2018 TripleOne</div>
     </div>
+    <script src="js/lib/jquery-3.3.1.min.js"></script>
+    <script src="js/lib/intlTelInput-jquery.min.js"></script>
+    <script src="js/lib/jquery.maskedinput.min.js"></script>
     <script src="js/form.js"></script>
   </body>
 </html>
