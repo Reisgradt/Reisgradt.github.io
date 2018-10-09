@@ -59,50 +59,7 @@
           </div>
         </div>
       </main>
-      <div class="calendar">
-        <div class="calendar__header">
-          <div class="calendar__arrow calendar__header__left"></div>
-          <div class="calendar__header__month">Nov 2018</div>
-          <div class="calendar__arrow calendar__header__right"></div>
-        </div>
-        <div class="calendar__days">
-          <div class="calendar__days__item">01</div>
-          <div class="calendar__days__item">02</div>
-          <div class="calendar__days__item">03</div>
-          <div class="calendar__days__item">04</div>
-          <div class="calendar__days__item">05</div>
-          <div class="calendar__days__item">06</div>
-          <div class="calendar__days__item">07</div>
-          <div class="calendar__days__item">08</div>
-          <div class="calendar__days__item calendar__days__item_active">09</div>
-          <div class="calendar__days__item">10</div>
-          <div class="calendar__days__item">11</div>
-          <div class="calendar__days__item">12</div>
-          <div class="calendar__days__item">13</div>
-          <div class="calendar__days__item">14</div>
-          <div class="calendar__days__item">15</div>
-          <div class="calendar__days__item">16</div>
-          <div class="calendar__days__item">17</div>
-          <div class="calendar__days__item">18</div>
-          <div class="calendar__days__item">19</div>
-          <div class="calendar__days__item calendar__days__item_selected">20</div>
-          <div class="calendar__days__item">21</div>
-          <div class="calendar__days__item">22</div>
-          <div class="calendar__days__item">23</div>
-          <div class="calendar__days__item">24</div>
-          <div class="calendar__days__item">25</div>
-          <div class="calendar__days__item">26</div>
-          <div class="calendar__days__item">27</div>
-          <div class="calendar__days__item">28</div>
-          <div class="calendar__days__item">29</div>
-          <div class="calendar__days__item">30</div>
-          <div class="calendar__days__item calendar__days__item_disabled">01</div>
-          <div class="calendar__days__item calendar__days__item_disabled">02</div>
-          <div class="calendar__days__item calendar__days__item_disabled">03</div>
-          <div class="calendar__days__item calendar__days__item_disabled">04</div>
-          <div class="calendar__days__item calendar__days__item_disabled">05</div>
-        </div>
-      </div>
+      <div data-month-format="MMM YYYY" id="calendar"></div>
     </div>
     <div class="footer">
       <div class="container">
@@ -131,5 +88,7 @@
         <div class="footer-year">© 2018 TripleOne</div>
       </div>
     </div>
+    <script src="js/lib/jsCalendar.min.js"></script>
+    <script src="js/calendar.js"></script>
   </body>
 </html>
