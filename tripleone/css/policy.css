@@ -842,7 +842,9 @@ body {
         opacity: .1;
         display: inline-block;
         margin-right: 10px;
-        vertical-align: top; }
+        vertical-align: top;
+        /* temp */
+        display: none; }
     .header__menu__list a:after {
       content: '';
       display: inline-block;
