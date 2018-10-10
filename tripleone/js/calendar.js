@@ -7,6 +7,7 @@
         monthFormat: 'MMM YYYY'
     });
 
+    /* Select day */
     calendar.onDateClick(function (event, date) {
         if (event.target.classList.contains('jsCalendar-previous') || event.target.classList.contains('jsCalendar-next')) {
             return;
@@ -19,21 +20,36 @@
         event.target.classList.add('jsCalendar-current');
     });
 
+    /* change month */
     calendar.onMonthChange(changeDate);
 
+    let calendarTitle = document.querySelector('.jsCalendar-title-name');
+
+    let contentTitle = document.querySelector('.current-month');
+    let prevArr = document.querySelector('.last-month');
+    let nextArr = document.querySelector('.next-month');
+
     function changeDate() {
-        let calendarTitle = document.querySelector('.jsCalendar-title-name');
-        let contentTitle = document.querySelector('.current-month');
         contentTitle.innerHTML = calendarTitle.innerHTML;
+
+        calendar.previous();
+        prevArr.innerHTML = calendarTitle.innerHTML;
+        calendar.next();
+
+        calendar.next();
+        nextArr.innerHTML = calendarTitle.innerHTML;
+        calendar.previous();
     }
 
-    document.querySelector('.last-month').addEventListener('click', () => {
+    prevArr.addEventListener('click', () => {
         calendar.previous();
         changeDate();
     });
 
-    document.querySelector('.next-month').addEventListener('click', () => {
+    nextArr.addEventListener('click', () => {
         calendar.next();
         changeDate();
     });
+
+    changeDate();
 })();
