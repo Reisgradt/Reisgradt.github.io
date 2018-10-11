@@ -551,7 +551,7 @@ a {
   font-size: 40px;
   font-weight: 900;
   font-family: GothamPro;
-  line-height: 29px;
+  line-height: 35px;
   margin-bottom: 31px;
   text-align: left; }
 
@@ -1214,11 +1214,14 @@ body {
       height: 28px;
       width: 28px;
       font-size: 14px;
+      line-height: 28px;
       opacity: .5;
       text-align: center;
       vertical-align: middle;
+      vertical-align: top;
       cursor: pointer;
-      margin: 0; }
+      margin: 0;
+      position: relative; }
       .jsCalendar tbody td:hover {
         opacity: 1; }
   .jsCalendar-previous, .jsCalendar-next {
@@ -1228,11 +1231,19 @@ body {
       opacity: .2 !important; }
   .jsCalendar-current {
     opacity: 1 !important;
-    color: #fff;
-    border-radius: 5px;
-    background-color: #22afff;
-    box-shadow: 0 15px 25px 0 rgba(34, 175, 255, 0.3);
-    cursor: default !important; }
+    color: #fff; }
+    .jsCalendar-current:after {
+      content: '';
+      height: 28px;
+      width: 28px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #22afff;
+      box-shadow: 0 15px 25px 0 rgba(34, 175, 255, 0.3);
+      cursor: default;
+      z-index: -1;
+      border-radius: 5px; }
     .jsCalendar-current:hover {
       opacity: 1 !important; }
   .jsCalendar-nav-left {

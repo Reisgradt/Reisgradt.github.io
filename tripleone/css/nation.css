@@ -551,7 +551,7 @@ a {
   font-size: 40px;
   font-weight: 900;
   font-family: GothamPro;
-  line-height: 29px;
+  line-height: 35px;
   margin-bottom: 31px;
   text-align: left; }
 
@@ -1092,8 +1092,7 @@ body {
     margin-top: 19px; }
 
 .nation-shares {
-  text-align: justify;
-  width: 783px; }
+  text-align: left; }
   @media screen and (max-width: 800px) {
     .nation-shares {
       text-align: left;
@@ -1107,7 +1106,10 @@ body {
         display: none; } }
   .nation-shares__item {
     display: inline-block;
-    font-size: 0; }
+    font-size: 0;
+    /* temp */ }
+    .nation-shares__item:first-child {
+      margin-right: 120px; }
     @media screen and (max-width: 800px) {
       .nation-shares__item {
         margin-bottom: 20px;

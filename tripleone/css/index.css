@@ -551,7 +551,7 @@ a {
   font-size: 40px;
   font-weight: 900;
   font-family: GothamPro;
-  line-height: 29px;
+  line-height: 35px;
   margin-bottom: 31px;
   text-align: left; }
 
@@ -1001,6 +1001,9 @@ body {
 .b2 {
   background: url("../img/body-pattern-06.svg") left top 433px, url("../img/body-pattern-07.svg") right top 392px, #fff;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 800px) {
+    .b2 {
+      background: #fff; } }
 
 .b3 {
   background: url("../img/body-pattern-06.svg") left top 433px, url("../img/body-pattern-07.svg") right top 392px, #f5f7fa;
@@ -1009,7 +1012,8 @@ body {
   @media screen and (max-width: 800px) {
     .b3 {
       height: auto;
-      padding-bottom: 175.5px; } }
+      padding-bottom: 175.5px;
+      background: #f5f7fa; } }
 
 .img1 .b-img {
   height: 515px;
