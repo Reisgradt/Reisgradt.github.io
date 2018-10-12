@@ -796,12 +796,10 @@ body {
   border-radius: 5px;
   box-shadow: 0 10px 20px 0 rgba(18, 51, 78, 0.05);
   padding: 60px;
-  font-size: 16px;
-  min-width: 470px; }
+  font-size: 16px; }
   @media screen and (max-width: 470px) {
     .content {
       width: 100%;
-      min-width: inherit;
       padding: 25px; } }
 
 .content_flex {
@@ -817,10 +815,12 @@ body {
   @media screen and (max-width: 941px) {
     .content_flex {
       flex-direction: column;
-      padding: 25px;
-      width: 100%; }
+      padding: 25px; }
       .content_flex:after {
         display: none; } }
+  @media screen and (max-width: 800px) {
+    .content_flex {
+      width: 100%; } }
   .content_flex:after {
     content: '';
     height: 457px;
