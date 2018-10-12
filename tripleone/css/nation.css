@@ -760,7 +760,8 @@ body {
       border-radius: 0 0 10px 10px;
       color: #3b4348;
       padding: 20px;
-      z-index: 15; }
+      z-index: 15;
+      font-family: GothamPro; }
       .header .header__menu__login {
         display: block;
         text-align: center; }
@@ -817,6 +818,7 @@ body {
       background: url("../img/arrow-down-b.svg") center no-repeat; } }
   .header__menu {
     font-weight: bold;
+    font-family: GothamPro;
     line-height: 24px;
     height: 24px;
     font-size: 0; }

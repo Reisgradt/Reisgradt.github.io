@@ -735,7 +735,8 @@ body {
       min-width: 375px; } }
 
 .wrapper {
-  text-align: center; }
+  text-align: center;
+  min-width: 375px; }
   .wrapper .logo,
   .wrapper .content,
   .wrapper .have-account {
@@ -1023,6 +1024,8 @@ body {
     padding-left: 50px !important;
     font-size: 16px;
     border-radius: 5px; }
+    .country-select input:focus {
+      box-shadow: none; }
 
 .selected-flag {
   padding-left: 20px !important;
