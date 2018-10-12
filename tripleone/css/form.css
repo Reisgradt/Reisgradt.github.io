@@ -746,7 +746,8 @@ body {
     width: 100%; }
   @media screen and (max-width: 800px) {
     .wrapper {
-      padding: 0 20px; } }
+      padding: 0 20px;
+      width: 100%; } }
 
 .footer {
   padding-bottom: 40px;
@@ -816,7 +817,8 @@ body {
   @media screen and (max-width: 941px) {
     .content_flex {
       flex-direction: column;
-      padding: 25px; }
+      padding: 25px;
+      width: 100%; }
       .content_flex:after {
         display: none; } }
   .content_flex:after {
