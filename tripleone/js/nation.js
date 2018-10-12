@@ -147,9 +147,13 @@
 })();
 
 (function () {
-    let sidebar = document.querySelector('#sidebar > div');
+    // let sidebar = document.querySelector('#sidebar > div');
 
     window.addEventListener('scroll', () => {
+        let sidebar = document.querySelector('.sticky');
+
+        if (!sidebar) return;
+
         let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
         sidebar.style.transform = 'translateX(-' + scrollLeft + 'px)';

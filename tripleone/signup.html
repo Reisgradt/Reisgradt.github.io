@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
     <title>TripleOne SignUp</title>
+    <link rel="stylesheet" href="js/lib/css/countrySelect.min.css"/>
     <link rel="stylesheet" href="css/form.css"/>
   </head>
   <body>   
@@ -16,17 +17,7 @@
           <div class="login-img-2" style="background-image: url(img/sign-up.svg)"></div>
           <form class="login-right-side" method="post">
             <div class="login-title login-margin-2">Sign Up</div>
-            <div class="custom-select login-margin-1">
-              <select class="custom-select__select" name="country">
-                <option disabled="disabled" selected="selected">Country
-                  <option value="0">UA</option>
-                  <option value="1">USA</option>
-                  <option value="2">AU</option>
-                </option>
-              </select>
-              <div class="custom-select__choosen">Traffic type </div>
-              <div class="custom-select__container"></div>
-            </div>
+            <input class="select-custom" type="text" name="country" id="country"/>
             <div class="form-input login-margin-1">
               <input placeholder="Email"/>
             </div>
@@ -54,6 +45,7 @@
     <script src="js/lib/jquery-3.3.1.min.js"></script>
     <script src="js/lib/intlTelInput-jquery.min.js"></script>
     <script src="js/lib/jquery.maskedinput.min.js"></script>
+    <script src="js/lib/countrySelect.min.js"></script>
     <script src="js/form.js"></script>
   </body>
 </html>

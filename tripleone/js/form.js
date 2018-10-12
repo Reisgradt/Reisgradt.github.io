@@ -95,6 +95,14 @@
             choosenEl.innerHTML = select.options[select.selectedIndex].innerHTML;
         }
     }
+    /*
+    doSelect(
+        document.querySelector('.custom-select'),
+        'custom-select__container',
+        'custom-select__choosen'
+    );
+    */
 
-    doSelect(document.querySelector('.custom-select'), 'custom-select__container', 'custom-select__choosen');
+    /* for country select */
+    $("#country").countrySelect();
 })();

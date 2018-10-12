@@ -496,9 +496,13 @@ a {
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
-  padding: 0 30px;
   cursor: pointer;
   transition: 0.3s; }
+  .login-btn a {
+    padding: 0 30px;
+    display: block;
+    height: 100%;
+    width: 100%; }
   .login-btn:hover {
     border: solid 2px #fff; }
   @media screen and (max-width: 800px) {
@@ -698,6 +702,10 @@ body {
       width: 100%;
       padding: 0 20px; } }
 
+@media screen and (max-width: 800px) {
+  .footer .container {
+    padding: 0; } }
+
 .header {
   height: 40px;
   line-height: 40px;
@@ -863,7 +871,8 @@ body {
         background: none; } }
   .footer .header {
     padding-top: 0;
-    margin-bottom: 52px; }
+    margin-bottom: 52px;
+    position: inherit; }
     @media screen and (max-width: 800px) {
       .footer .header {
         display: none; } }
