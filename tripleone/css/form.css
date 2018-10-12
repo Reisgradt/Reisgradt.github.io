@@ -822,7 +822,7 @@ body {
     .content_flex {
       width: 100%;
       padding: 0 25px;
-      min-width: 420px; } }
+      max-width: 420px; } }
   .content_flex:after {
     content: '';
     height: 457px;
