@@ -820,7 +820,9 @@ body {
         display: none; } }
   @media screen and (max-width: 800px) {
     .content_flex {
-      width: 100%; } }
+      width: 100%;
+      padding: 0 25px;
+      min-width: 420px; } }
   .content_flex:after {
     content: '';
     height: 457px;
