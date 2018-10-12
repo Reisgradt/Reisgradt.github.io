@@ -105,4 +105,11 @@
 
     /* for country select */
     $("#country").countrySelect();
+
+    function changeWidth() {
+        $(".country-list").css('width', $(".country-select").width() + 'px');
+        console.log($("#country").width());
+    }
+
+    $(window).on('load resize', changeWidth);
 })();

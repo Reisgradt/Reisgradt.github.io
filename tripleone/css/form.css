@@ -719,6 +719,12 @@ body {
   .container-2 .wrapper .logo,
   .container-2 .wrapper .content_flex {
     margin-bottom: 40px; }
+  @media screen and (max-width: 800px) {
+    .container-2 .login-img-2 {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      background-size: contain; } }
 
 .container,
 .footer {
@@ -737,6 +743,9 @@ body {
     display: inline-block; }
   .wrapper .btn {
     width: 100%; }
+  @media screen and (max-width: 800px) {
+    .wrapper {
+      padding: 0 20px; } }
 
 .footer {
   padding-bottom: 40px;
@@ -789,8 +798,8 @@ body {
   min-width: 470px; }
   @media screen and (max-width: 470px) {
     .content {
-      width: auto;
-      min-width: 375px;
+      width: 100%;
+      min-width: inherit;
       padding: 25px; } }
 
 .content_flex {
@@ -806,7 +815,7 @@ body {
   @media screen and (max-width: 941px) {
     .content_flex {
       flex-direction: column;
-      padding: 30px; }
+      padding: 25px; }
       .content_flex:after {
         display: none; } }
   .content_flex:after {
@@ -1027,12 +1036,15 @@ body {
     position: absolute !important;
     background: url("../img/arrow-down-b.svg") center no-repeat;
     right: -277px !important; }
+    @media screen and (max-width: 800px) {
+      .selected-flag .arrow {
+        display: none; } }
   .selected-flag .up {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
 
 .country-list {
-  width: 350px;
+  width: 349px;
   overflow-x: hidden;
   background: #fff;
   border-radius: 0 0 5px 5px !important;
@@ -1041,7 +1053,9 @@ body {
   border-top: none;
   box-sizing: content-box;
   left: 0px;
-  box-shadow: none !important; }
+  box-shadow: none !important;
+  padding-top: 5px !important;
+  margin-top: -6px !important; }
   .country-list li {
     padding: 0 0 0 20px !important;
     height: 48px;
