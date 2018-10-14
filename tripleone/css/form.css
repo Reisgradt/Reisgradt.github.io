@@ -1068,7 +1068,9 @@ body {
     line-height: 48px;
     position: relative;
     font-size: 16px;
-    color: rgba(59, 67, 72, 0.6); }
+    color: rgba(59, 67, 72, 0.6);
+    overflow: hidden;
+    white-space: nowrap; }
     .country-list li:hover {
       background: transparent !important; }
     .country-list li:before {
