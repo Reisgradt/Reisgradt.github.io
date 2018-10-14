@@ -115,6 +115,7 @@
     $(document).ready(() => {
         console.log($("#country"));
         $("#country").countrySelect();
+        $("#country").countrySelect('setCountry', '');
         setTimeout(changeWidth, 400);
 
         $(window).on('resize', changeWidth);
