@@ -113,10 +113,10 @@
     }
 
     $(document).ready(() => {
-        console.log($("#country"));
         $("#country").countrySelect();
-        $("#country").countrySelect('setCountry', '');
-        setTimeout(changeWidth, 400);
+        //$("#country").countrySelect('setCountry', '');
+        //setTimeout(changeWidth, 300);
+        changeWidth();
 
         $(window).on('resize', changeWidth);
     });
