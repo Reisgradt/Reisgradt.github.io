@@ -109,11 +109,14 @@
         $(".country-list").css('width', $(".country-select").width() + 'px');
 
         /* additional functional */
-        $('.arrow').css('right', -($("#country").width() - 20) + 'px ');
+        $('.arrow').css('right', -($("#country").width() + 50 - 20) + 'px ');
     }
 
-    $(window).on('load', () => $("#country").countrySelect());
+    $(document).ready(() => {
+        console.log($("#country"));
+        $("#country").countrySelect();
+        setTimeout(changeWidth, 400);
 
-    $(window).on('resize', changeWidth);
-    $(window).on('load', changeWidth);
+        $(window).on('resize', changeWidth);
+    });
 })();
