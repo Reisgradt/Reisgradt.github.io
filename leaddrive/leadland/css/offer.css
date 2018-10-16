@@ -1,0 +1,236 @@
+@charset "UTF-8";
+/* Главная часть сайта */
+/* Адаптив */
+/* login */
+/* HEADER */
+/* BLOCK1 */
+/* BLOCK2 */
+/* BLOCK3 */
+/* BLOCK4 */
+/* BLOCK5 */
+/* BLOCK6 */
+/* BLOCK7 */
+/* FOOTER */
+/* New heights */
+/* Img logo */
+/* ОФФЕРЫ !!! */
+/*
+.block1-small {
+    position: relative;
+    z-index: 0;
+}
+*/
+.block2 {
+  position: relative;
+  top: -100px;
+  z-index: 2; }
+  .block2 .container {
+    position: relative; }
+    .block2 .container:after {
+      content: '';
+      display: block;
+      height: 200px;
+      width: 200px;
+      background-image: linear-gradient(to right, #983893, #473fa9);
+      box-shadow: 0 40px 70px 0 rgba(125, 70, 211, 0.3);
+      border-radius: 50%;
+      position: absolute;
+      left: -100px;
+      bottom: 220px;
+      z-index: 0; }
+    .block2 .container:before {
+      content: '';
+      display: block;
+      height: 280px;
+      width: 280px;
+      background-image: linear-gradient(143deg, #fd9e4c, #f60d45);
+      box-shadow: 0 40px 70px 0 rgba(212, 34, 31, 0.3);
+      border-radius: 50%;
+      position: absolute;
+      right: -140px;
+      top: 220px;
+      z-index: 0; }
+  .block2__container {
+    position: relative;
+    z-index: 4;
+    background: #fff;
+    padding: 50px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 15px 35px 0 rgba(78, 49, 177, 0.05);
+    text-align: center; }
+  .block2__first-line {
+    font-size: 0;
+    position: relative;
+    padding-bottom: 40px;
+    text-align: left; }
+    .block2__first-line:after {
+      content: '';
+      height: 1px;
+      width: 1039px;
+      background: rgba(0, 0, 0, 0.05);
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    .block2__first-line__item {
+      display: inline-block;
+      font-size: 16px;
+      vertical-align: top; }
+      .block2__first-line__item:nth-child(1) {
+        width: 144px;
+        margin-right: 105px; }
+      .block2__first-line__item:nth-child(2) {
+        width: 284px; }
+      .block2__first-line__item:nth-child(3) {
+        width: 230px; }
+      .block2__first-line__item:nth-child(4) {
+        width: 251px; }
+    .block2__first-line__row {
+      margin-bottom: 22px; }
+      .block2__first-line__row:last-child {
+        margin-bottom: 0; }
+  .block2__img {
+    background-color: #fff;
+    box-shadow: 0 15px 35px 0 rgba(78, 49, 177, 0.05);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    height: 144px;
+    width: 144px;
+    background: center no-repeat;
+    background-size: cover; }
+  .block2__name {
+    color: #5f3ca3;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center; }
+  .block2__title {
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 18px; }
+    .block2__title_offer {
+      margin-bottom: 26px; }
+  .block2__label {
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.4); }
+    .block2__label span {
+      color: rgba(0, 0, 0, 0.6); }
+    .block2__label span.block2__label__work {
+      color: #64a617; }
+    .block2__label span.block2__label__not-work {
+      color: #F60F45; }
+  .block2__country {
+    font-size: 0;
+    color: #000;
+    margin-bottom: 26px; }
+    .block2__country:last-child {
+      margin-bottom: 0; }
+    .block2__country__flag {
+      height: 24px;
+      width: 24px;
+      display: inline-block;
+      margin-right: 15px;
+      vertical-align: middle; }
+    .block2__country__inline {
+      display: inline-block;
+      vertical-align: middle; }
+    .block2__country__inline-2 {
+      vertical-align: bottom;
+      font-size: 0; }
+    .block2__country__payments {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 10px;
+      margin-bottom: 11px;
+      color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      margin-right: 15px; }
+    .block2__country__country-name {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.4);
+      line-height: 8px; }
+    .block2__country__currency {
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 12px;
+      line-height: 8px;
+      text-transform: uppercase; }
+  .block2__rocket {
+    height: 30px;
+    width: 30px;
+    display: block;
+    background: url("../img/rocket.svg") center no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .block2__second-line {
+    font-size: 0;
+    padding: 40px 0 32px;
+    position: relative;
+    margin-bottom: 30px;
+    text-align: left; }
+    .block2__second-line:after {
+      content: '';
+      height: 1px;
+      width: 1039px;
+      background: rgba(0, 0, 0, 0.05);
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    .block2__second-line__item {
+      display: inline-block;
+      vertical-align: top; }
+      .block2__second-line__item:nth-child(1) {
+        width: 519px; }
+    .block2__second-line__descr {
+      opacity: 0.6;
+      font-size: 16px;
+      color: #000;
+      width: 290px;
+      line-height: 26px; }
+  .block2__column {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-width: 230px;
+            column-width: 230px; }
+    .block2__column__item {
+      font-size: 16px;
+      line-height: 26px;
+      color: rgba(0, 0, 0, 0.6); }
+      .block2__column__item:before {
+        content: '';
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        background-color: #5f3ca3;
+        margin-right: 10px;
+        margin-top: -3px;
+        vertical-align: middle;
+        border-radius: 50%; }
+
+.connect-btn {
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 3px;
+  font-weight: bold;
+  height: 60px;
+  width: 340px;
+  display: inline-block;
+  line-height: 60px;
+  text-align: left;
+  padding: 0 30px;
+  background-image: linear-gradient(100deg, #fd9e4c, #f60d45);
+  box-shadow: 0 10px 25px 0 rgba(212, 34, 31, 0.3);
+  border-radius: 5px;
+  position: relative;
+  text-decoration: none; }
+  .connect-btn:after {
+    content: '';
+    height: 18px;
+    width: 20px;
+    position: absolute;
+    background: url("../img/rocket-fff.svg") center no-repeat;
+    right: 30px;
+    top: 50%;
+    margin-top: -9px; }

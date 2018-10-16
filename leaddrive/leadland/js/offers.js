@@ -19,17 +19,35 @@ arrowCountryUp.forEach(item => {
 });
 arrowCountryDown.forEach(item => {
     item.addEventListener('click', moveCountryUp);
+
+    /* Неподвижный контейнер */
+    let container = getNeighbor(item, 'block2__countries-container');
+
+    /* То, что надо двигать */
+    let slider = getChild(container, 'block2__country-slider');
+
+    if (container.clientHeight > slider.clientHeight) {
+        item.classList.add('block2__countries-arrow_disable');
+    }
 });
 
 function moveCountryUp(e) {
-    /*  Поиск другой кнопки в этом блоке */
-    let anotherBtn = getNeighbor(e.target, 'block2__countries-arrow_up');
-
     /* Неподвижный контейнер */
     let container = getNeighbor(e.target, 'block2__countries-container');
 
     /* То, что надо двигать */
     let slider = getChild(container, 'block2__country-slider');
+
+    /* 
+        Если контейнер меньше высоты блока, то ничего 
+        перематывать и не нужно
+    */
+    if (container.clientHeight > slider.clientHeight) {
+        return;
+    }
+
+    /*  Поиск другой кнопки в этом блоке */
+    let anotherBtn = getNeighbor(e.target, 'block2__countries-arrow_up');
 
     /* Узнаём смещение */
     let currentCountryOffset = +slider.style.top.slice(0, slider.style.top.length - 2) - heightCountryEl;
@@ -49,14 +67,22 @@ function moveCountryUp(e) {
 }
 
 function moveCountryDown(e) {
-    /*  Поиск другой кнопки в этом блоке */
-    let anotherBtn = getNeighbor(e.target, 'block2__countries-arrow_down');
-
     /* Неподвижный контейнер */
     let container = getNeighbor(e.target, 'block2__countries-container');
 
     /* То, что надо двигать */
     let slider = getChild(container, 'block2__country-slider');
+
+    /* 
+        Если контейнер меньше высоты блока, то ничего 
+        перематывать и не нужно
+    */
+    if (container.clientHeight > slider.clientHeight) {
+        return;
+    }
+
+    /*  Поиск другой кнопки в этом блоке */
+    let anotherBtn = getNeighbor(e.target, 'block2__countries-arrow_down');
 
     /* Узнаём смещение */
     let currentCountryOffset = +slider.style.top.slice(0, slider.style.top.length - 2) + heightCountryEl;
@@ -83,26 +109,6 @@ function getNeighbor(el, neighborClass) {
     let parent = el.parentElement;
     return getChild(el.parentElement, neighborClass);
 }
-
-/* login */
-let loginBtn = document.querySelector('.menu__item_login'),
-    isShown = false;
-
-let darkerBg = document.querySelector('.darker-bg'),
-    login = document.querySelector('.login'),
-    close = document.querySelector('.login__close'),
-    nameField = document.querySelector('.login__name');
-
-loginBtn.addEventListener('click', toggleLogin);
-darkerBg.addEventListener('click', toggleLogin);
-close.addEventListener('click', toggleLogin);
-
-function toggleLogin() {
-    darkerBg.classList.toggle('darker-bg_active');
-    login.classList.toggle('login_active');
-    nameField.focus();
-}
-
 /* Дано */
 
 /* Все элементы для раскрытия */
@@ -139,26 +145,57 @@ function chooseNavItem(e) {
     disableAll();
     e.target.classList.add('block2__navigation__list__item_active');
 }
+let form = document.querySelector('.block2__first-line');
 
 function doSelect(selectEl, containerCl, choosenCl) {
+    /* Сам селект */
+    let select = getChild(selectEl, 'search-line__select__input');
+    /* Контейнер для заполнения */
     let optionContainer = getChild(selectEl, containerCl);
+    /* Текущий элемент выбора */
     let choosenEl = getChild(selectEl, choosenCl);
 
+    /* Создать на каждый option pseudoOption */
+    Array.from(select.children).forEach(item => {
+        if (item.disabled) return;
+
+        let pseudoOption = document.createElement('div');
+        pseudoOption.classList.add('search-line__select__item');
+        pseudoOption.innerHTML = item.innerHTML;
+        pseudoOption.dataset.value = item.value;
+
+        optionContainer.appendChild(pseudoOption);
+    });
+
+    /* Записать choosen элемент */
+    choosenEl.innerHTML = select.options[select.selectedIndex].innerHTML;
+
+    /* Открытие и закрытие контейнера выпадающего списка */
     selectEl.addEventListener('click', e => {
         optionContainer.classList.toggle(containerCl + '_active');
     });
 
+    /* Сворачивание контейнера при нажатии вне его границ */
     document.body.addEventListener('click', e => {
         if (e.target === selectEl || e.target === optionContainer || e.target === choosenEl) return;
         optionContainer.classList.remove(containerCl + '_active');
     });
 
+    /* При нажатии на элемент, выбрать его */
     Array.from(optionContainer.children).forEach(item => {
         item.addEventListener('click', selectItem);
     });
 
     function selectItem(e) {
-        choosenEl.innerHTML = e.target.innerHTML;
+        choosenEl.innerHTML = select.options[select.selectedIndex].innerHTML;
+
+        Array.from(select.options).forEach(option => {
+            if (option.value == e.target.dataset.value) {
+                option.selected = true;
+            }
+        });
+
+        form.submit();
     }
 }
 

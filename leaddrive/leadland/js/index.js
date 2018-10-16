@@ -12,7 +12,7 @@ function anim(cl, time) {
     os.on('enter', '.' + cl, el => addCl(el, cl, time));
 }
 
-function animChildren(cl, chcl, timeDelay, startDelay) {
+function animChildren(cl, chcl, timeDelay, startDelay = 0) {
     os.on('enter', '.' + cl, el => {
         let i = 0;
         Array.from(el.children).forEach(child => {
@@ -76,7 +76,7 @@ let osMoney = new OnScreen({
     debounce: 0
 });
 
-osMoney.on('enter', '.block5__table__row:nth-child(7)', toTopScreenOS.bind(null, osMoney));
+osMoney.on('enter', '.block5__table__row:nth-child(1)', toTopScreenOS.bind(null, osMoney));
 
 let osSlider2 = new OnScreen();
 
@@ -108,26 +108,6 @@ os.on('enter', '.block7__follow-us__row', el => {
 });
 
 animChildren('l-img__container', 'l-img__icon', 300, 1500);
-
-/* login */
-let loginBtn = document.querySelector('.menu__item_login'),
-    isShown = false;
-
-let darkerBg = document.querySelector('.darker-bg'),
-    login = document.querySelector('.login'),
-    close = document.querySelector('.login__close'),
-    nameField = document.querySelector('.login__name');
-
-loginBtn.addEventListener('click', toggleLogin);
-darkerBg.addEventListener('click', toggleLogin);
-close.addEventListener('click', toggleLogin);
-
-function toggleLogin() {
-    darkerBg.classList.toggle('darker-bg_active');
-    login.classList.toggle('login_active');
-    nameField.focus();
-}
-
 /* Parallax */
 let coefParallax = .1,
     offsetValue = 100;
@@ -151,7 +131,6 @@ window.addEventListener('scroll', () => {
         parallaxText.style.transform = 'translateX(' + (offsetValue - currentOffset) + 'px)';
     }
 });
-
 /* slider 1 */
 
 const transTime = 1;
@@ -279,7 +258,6 @@ function choseRadioBtn(e) {
         prevSlide();
     }
 }
-
 /* slider 2 */
 let leftBtn = document.querySelector('.block6__btn_left'),
     rightBtn = document.querySelector('.block6__btn_right'),
