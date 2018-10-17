@@ -236,6 +236,7 @@ footer ul li a:hover{color:#2ab2c3}
 .mob-header-icon,header p{display:inline-block;vertical-align:middle}
 .mob-header-icon{background:url(../img/icon-menu.svg) center no-repeat;background-size:contain;height:24px;width:30px;cursor:pointer}
 body{padding-top:105px;overflow:auto}
+.how_its_made .positions,.our_services{overflow:hidden}
 .wrap_c{width:560px}
 header{padding-bottom:20px;position:fixed;top:0;left:0;right:0;z-index:100;background:#fff}
 header p{margin-right:40px}
@@ -286,7 +287,6 @@ header ul li{display:block}
 .compare_call_center ul li,.compare_call_center ul:first-child li{background-position:center top;padding:45px 0 0;text-align:center}
 .compare_call_center h2{margin-bottom:50px}
 .compare_call_center ul li{line-height:24px;margin-bottom:0;min-height:125px}
-.our_services{overflow:hidden}
 .our_services .wrap_c{margin-bottom:0;padding-bottom:95px}
 .our_services .wrap_c:after{width:273px;height:440px;background-size:contain}
 .our_services .content{float:none;width:100%}
