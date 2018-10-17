@@ -1,0 +1,797 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Hypersales</title>
+        <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/style_index.css" />
+        <link rel="stylesheet" type="text/css" href="bower_components/fancybox/source/jquery.fancybox.css" />
+
+
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/bxslider-4/src/js/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="bower_components/jquery-animateNumber/jquery.animateNumber.min.js"></script>
+        <script type="text/javascript" src="bower_components/fancybox/source/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="bower_components/jquery.maskedinput/src/jquery.maskedinput.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript" src="js/valid_form.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+$jsonData = {}
+    </script>
+    </head>
+    <body>
+        <header class="block">
+            <div class="wrap_c">
+                <div class="left">
+                    <img class="logo" src="img/logo.png" alt="">
+                </div>
+                <div class="right relative">
+                    <p>
+                        <span class="mob-hide">Узнайте подробности:&nbsp;&nbsp;</span> <strong class="mob-block">+7 (910) 559-09-57</strong> <a href="#callback" class="fancybox">Заказать звонок</a>
+                    </p>
+                    <label class="mob-header-icon" for="mobile-toggle"></label>
+                    <input type="checkbox" id="mobile-toggle">
+                    <ul  class="ankor_nav">
+                        <li>
+                            <a href="#anck_1">Как мы это делаем </a>
+                        </li>
+                        <li>
+                            <a href="#anck_2">Мы в цифрах</a>
+                        </li>
+                        <li>
+                            <a href="#anck_3">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="#anck_4">Сравнить</a>
+                        </li>
+                        <li>
+                            <a href="#anck_5">Отзывы </a>
+                        </li>
+                        <li>
+                            <a href="#anck_6">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="why_us block">
+            <div class="wrap_c">
+                <h2>
+                    Увеличиваем рентабельность вашего бизнеса
+                </h2>
+                <p>
+                    <strong>УВЕЛИЧЬТЕ ВЫРУЧКУ</strong> ВАШЕГО БИЗНЕСА <strong>В 2 РАЗА</strong> ВМЕСТЕ С HYPERSALES!
+                </p>
+                <div class="row relative">
+                    <ul>
+                        <li>
+                            <strong>низкий</strong> % подтверждений заказов?
+                        </li>
+                        <li>
+                            <strong>низкий</strong> средний чек?
+                        </li>
+                        <li>
+                            <strong>плохой</strong> выкуп?
+                        </li>
+                        <li>
+                            бизнес <strong>не приносит</strong> денег?
+                        </li>
+                        <li class="accept">
+                            <strong>Обратитесь к нам!</strong>
+                        </li>
+                    </ul>
+
+                    <div class="form_block">
+                        <form action="/success/" method="post">
+                            <p>
+                                Отправьте заявку и получите <br> <strong>бесплатную консультацию</strong><br>
+                                как увеличить прибыль бизнеса
+                                с помощью HYPERSALES
+                            </p>
+                            <input type="text" placeholder="Фамилия Имя Отчество"  name="name" value="">
+                            <input type="text" placeholder="Ваш телефон"  name="phone" value="">
+                            <div class="reolader">
+                            <button class="mm_button" onclick="checkFields(event, this);">
+                                Получить<br>
+                                консультацию
+                            </button>
+                            <div class="ajax_loader_block"><img class="ajax_loader" src="/img/ajax-loader.gif" alt="Идет отправка данных"> <span class="ajax_loader">Идет отправка данных</span></div>
+                            </div>
+              <input type="hidden" name="productsum" value="1000 руб." />
+              <input type="hidden" name="delivery" value="100 руб." />
+              <input type="hidden" name="totalsum" value="1100 руб." />
+              <input type="hidden" name="lead" value="" />
+              <input type="hidden" name="subid" value="" />
+              <input type="hidden" name="id_st" value="" />
+              <input type="hidden" name="user" value="1" />
+              <input type="hidden" name="adress" value="Уточнить у покупателя">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="anck_1" class="how_its_made block">
+            <div class="wrap_c">
+                <h2>
+                    <span>Как работает</span> call-центр Hypersales
+                </h2>
+                <div class="row positions">
+                    <div class="position_item">
+                        <img src="img/how_its_made_1.png" alt="" class="left">
+                        <p class="right">
+                            Строим и оптимизируем каждый параметр<br>
+                            воронки продаж, считаем все
+                        </p>
+                    </div>
+                    <div class="position_item">
+                        <img src="img/how_its_made_2.png" alt="" class="right">
+                        <p class="left">
+                            Используем адаптивный<br>
+                            многоканальный дайлер
+                        </p>
+                    </div>
+                    <div class="position_item">
+                        <img src="img/how_its_made_3.png" alt="" class="left">
+                        <p class="right">
+                            Используем особую методику отбора,<br>
+                            обучения и мотивации операторов
+                        </p>
+                    </div>
+                    <div class="position_item">
+                        <img src="img/how_its_made_4.png" alt="" class="right">
+                        <p class="left">
+                            Применяем AVR, SMS-цепочки<br>
+                            и e-mail-цепочки
+                        </p>
+                    </div>
+                    <div class="position_item">
+                        <img src="img/how_its_made_5.png" alt="" class="left">
+                        <p class="right">
+                            Неприрывная оптимизация скриптов, апсейлы,<br>
+                            крос-сейлы, допродажи, активация базы
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sale_action block">
+            <div class="wrap_c">
+                <h2>
+                  АКЦИЯ
+                </h2>
+                <hr>
+                <p>
+                    Только до 09.03.2016 <strong>скидка 30%</strong> <br>
+                    на стоимость минуты работы оператора <br>
+                    за первый месяц работы!
+                </p>
+                <a href="#take_sale_btn" class="fancybox button">
+                    Получить<br>
+                    скидку
+                </a>
+            </div>
+        </section>
+        <section id="anck_2"  class="we_in_num block">
+            <div class="wrap_c">
+                <h2>
+                    <span>Мы</span> в цифрах
+                </h2>
+                <div class="row">
+                    <ul class="our_num_title">
+                        <li>
+                            <div class="wrap">
+                                <span class="left">
+                                Продаж в 2015 году
+                                </span>
+                                <span class="right">
+                                   <strong>более</strong>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <span class="left">
+                                Скриптов написано и оптимизированно
+                                </span>
+                                <span class="right">
+                                   <strong>более</strong>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <span class="left">
+                                Увеличение среднего чека по каждому клиенту
+                                </span>
+                                <span class="right">
+                                   <strong>на</strong>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <span class="left">
+                                Среднее улучшение дозвона до клиентов
+                                </span>
+                                <span class="right">
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <span class="left">
+                                Среднее увеличение выкупа заказов
+                                </span>
+                                <span class="right">
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <span  class="left">
+                                Обзвон клиентов
+                                </span>
+                                <span class="right">
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <span  class="left">
+                                Среднее время от заказа до звонка
+                                </span>
+                                <span class="right">
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <span  class="left">
+                                Среднее увеличение прибыли наших клиентов
+                                </span>
+                                <span class="right">
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="our_num_title_num">
+                        <li><span id="num1">0</span> 000</li>
+                        <li><span id="num2">400</span></li>
+                        <li><span id="num3">343</span>% <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255562754" data-fancybox-type="iframe" class="fancybox_iframe">прослушать<br> запись звонка</a></li>
+                        <li><span id="num4">17</span>%</li>
+                        <li><span id="num5">7</span>% <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255563603" data-fancybox-type="iframe" class="fancybox_iframe">прослушать<br> запись звонка</a></li>
+                        <li><span id="num7">24</span>/<span id="num8">7</span>/<span id="num9">365</span></li>
+                        <li>1,5 <span class="minutes">минуты</span></li>
+                        <li><span id="num6">201</span>% <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255563793" data-fancybox-type="iframe" class="fancybox_iframe">прослушать<br> запись звонка</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </section>
+        <section id="anck_4" class="compare_call_center block">
+            <div class="wrap_c">
+                <h2>
+                    Сравните обычный call-центр <span>и Hypersales</span>
+                </h2>
+                <div class="row">
+                    <ul>
+                        <li>
+                            Многочисленые <strong>доплаты</strong>
+                        </li>
+                        <li>
+                            Не все записи, наличие <strong>“пустых” минут</strong>
+                        </li>
+                        <li>
+                            <strong>Плохой</strong> дозвон
+                        </li>
+                        <li>
+                            <strong>Завышенная</strong> стоимость
+                        </li>
+                        <li>
+                            Оплата <strong>за минуты</strong>
+                        </li>
+                        <li>
+                            <strong>Показатели ниже</strong> заявленных
+                        </li>
+                        <li>
+                            Всегда присутствуют <strong>слабые операторы</strong>
+                        </li>
+                        <li>
+                            Постоянные <strong>технические проблемы</strong>
+                        </li>
+                        <li>
+                            Очень <strong>медленые изменения</strong>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Понятные условия</strong> оплаты
+                        </li>
+                        <li>
+                            Все <strong>записи звонков</strong>
+                        </li>
+                        <li>
+                            <strong>Высокий</strong> % дозвонов
+                        </li>
+                        <li>
+                            Стоимость минуты <strong>от 7 рублей</strong>
+                        </li>
+                        <li>
+                            Оплата <strong>за результат</strong>
+                        </li>
+                        <li>
+                            <strong>Высокие</strong> показатели
+                        </li>
+                        <li>
+                            Только <strong>профессиональные операторы</strong>
+                        </li>
+                        <li>
+                            Стабильность <strong>24/7</strong>
+                        </li>
+                        <li>
+                            <strong>Быстрые</strong> изменения
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div id="callback" class="popup_block block">
+            <div class="form_block">
+                <form action="/success/" method="post">
+                    <p>
+                        Оставьте телефон и получите<br>
+                        <strong>бесплатную консультацию</strong><br>
+                        как увеличить прибыль бизнеса<br>
+                        с помощью HYPERSALES<br>
+                    </p>
+                            <input type="text" placeholder="Фамилия Имя Отчество"  name="name" value="">
+                            <input type="text" placeholder="Ваш телефон"  name="phone" value="">
+                            <div class="reolader">
+                            <button class="mm_button" onclick="checkFields(event, this);">
+                                Получить<br>
+                                консультацию
+                            </button>
+                            <div class="ajax_loader_block"><img class="ajax_loader" src="/img/ajax-loader.gif" alt="Идет отправка данных"> <span class="ajax_loader">Идет отправка данных</span></div>
+                            </div>
+              <input type="hidden" name="productsum" value="1000 руб." />
+              <input type="hidden" name="delivery" value="100 руб." />
+              <input type="hidden" name="totalsum" value="1100 руб." />
+              <input type="hidden" name="lead" value="" />
+              <input type="hidden" name="subid" value="" />
+              <input type="hidden" name="id_st" value="" />
+              <input type="hidden" name="user" value="1" />
+              <input type="hidden" name="adress" value="Уточнить у покупателя">
+                </form>
+            </div>
+        </div>
+        <div id="take_sale_btn" class="popup_block block">
+            <div class="form_block">
+                <form action="/success/" method="post">
+                    <p>
+                        Заполните форму и получите<br>
+                        <strong>скидку 30%</strong> на стоимость<br>
+                        минуты работы оператора<br>
+                        за первый месяц работы!
+                    </p>
+                            <input type="text" placeholder="Фамилия Имя Отчество"  name="name" value="">
+                            <input type="text" placeholder="Ваш телефон"  name="phone" value="">
+                            <div class="reolader">
+                            <button class="mm_button" onclick="checkFields(event, this);">
+                                Получить<br>
+                                скидку
+                            </button>
+                            <div class="ajax_loader_block"><img class="ajax_loader" src="/img/ajax-loader.gif" alt="Идет отправка данных"> <span class="ajax_loader">Идет отправка данных</span></div>
+                            </div>
+              <input type="hidden" name="productsum" value="1000 руб." />
+              <input type="hidden" name="delivery" value="100 руб." />
+              <input type="hidden" name="totalsum" value="1100 руб." />
+              <input type="hidden" name="lead" value="" />
+              <input type="hidden" name="subid" value="" />
+              <input type="hidden" name="id_st" value="" />
+              <input type="hidden" name="user" value="1" />
+              <input type="hidden" name="adress" value="Уточнить у покупателя">
+                </form>
+            </div>
+        </div>
+        <div id="order_sales" class="popup_block">
+            <div class="form_block">
+                <form action="/success/" method="post">
+                    <p>
+                        Заполните форму и получите<br>
+                        <strong>бесплатный сплит-тест</strong> на 30 заказов<br>
+                        вашего call-центра и Hyersales <br>
+                        и сравните результаты!
+                    </p>
+                            <input type="text" placeholder="Фамилия Имя Отчество"  name="name" value="">
+                            <input type="text" placeholder="Ваш телефон"  name="phone" value="">
+                            <div class="reolader">
+                            <button class="mm_button" onclick="checkFields(event, this);">
+                                Заказать<br>
+                                сплит-тест
+                            </button>
+                            <div class="ajax_loader_block"><img class="ajax_loader" src="/img/ajax-loader.gif" alt="Идет отправка данных"> <span class="ajax_loader">Идет отправка данных</span></div>
+                            </div>
+              <input type="hidden" name="productsum" value="1000 руб." />
+              <input type="hidden" name="delivery" value="100 руб." />
+              <input type="hidden" name="totalsum" value="1100 руб." />
+              <input type="hidden" name="lead" value="" />
+              <input type="hidden" name="subid" value="" />
+              <input type="hidden" name="id_st" value="" />
+              <input type="hidden" name="user" value="1" />
+              <input type="hidden" name="adress" value="Уточнить у покупателя">
+                </form>
+            </div>
+        </div>
+        <section id="anck_3" class="our_services block">
+            <div class="wrap_c">
+                <div class="content">
+                    <div class="title">
+                        Наши <span>услуги</span>
+                    </div>
+                    <div class="items">
+                        <div class="item item_1">
+                            <div class="img">
+                                <img src="img/serv1.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Обработка заказов <br /> в интернет магазинах
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item_6">
+                            <div class="img">
+                                <img src="img/serv2.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Активная <br />
+                                    горячая линия
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item_2">
+                            <div class="img">
+                                <img src="img/serv3.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Прямые продажи <br />
+                                    по холодной базе
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item_7">
+                            <div class="img">
+                                <img src="img/serv4.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Опросы <br />
+                                    и анкетирования
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item_3">
+                            <div class="img">
+                                <img src="img/serv5.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Активный аккаунтинг
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item_8">
+                            <div class="img">
+                                <img src="img/serv6.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Директ маркетинг
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item_4">
+                            <div class="img">
+                                <img src="img/serv7.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Лидогенерация
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item_9">
+                            <div class="img">
+                                <img src="img/serv8.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Повышение <br />
+                                    выкупа заказов
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item_5">
+                            <div class="img">
+                                <img src="img/serv9.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Активный саппорт
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item_10">
+                            <div class="img">
+                                <img src="img/serv10.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <div class="cell">
+                                    Коллекторские <br />
+                                    услуги
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="anck_5" class="comments block">
+            <div class="wrap_c">
+                <div class="title">
+                    <span>Отзывы</span> наших клиентов
+                </div>
+                <div class="items">
+                    <div class="bxslider">
+                        <div class="item">
+                            <div class="img">
+                                <div class="iblock">
+                                    <div class="cell">
+                                        <img src="img/comment1.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="original">
+                                <a href="img/comment1.png" rel="comments" class="fancybox">Оригинал отзыва</a>
+                            </div>
+                            <div class="text">
+                                Компания "Альфа банк" сотрудничает с call-центром «Hyper Sales» по партнерской программе в области лидогенерации. Благодарим аутсорсинговый call-центр «Hyper Sales» за профессионализм и надежность. Сотрудники работают эффективно и быстро. Не пришлось долго разъяснять, что мы хотим получить в итоге, наоборот, наши мысли схватывали на лету и результаты мы наблюдали уже с первых дней сотрудничества. За время работы с «Hyper Sales» не возникло никаких претензий и нареканий к качеству предоставляемых услуг, квалификации и компетенции сотрудников компании. Рекомендуем Call-центр «Hyper Sales» как настоящих профессионалов в области прямых продаж. 
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <div class="iblock">
+                                    <div class="cell">
+                                        <img src="img/comment2.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="original">
+                                <a href="img/comment2.png" rel="comments" class="fancybox">Оригинал отзыва</a>
+                            </div>
+                            <div class="text">
+                                Компании «Hyper Sales» была поставлена задача по подтверждению заказов интернет магазина и сопровождению логистики. Сотрудники действительно отлично владеют техниками активных продаж и способны показывать высокие результаты. Hyper Sales удалось поднять наш средний чек с 2500 руб. до 3200 руб. при этом держали показатель подтверждения заказов от 70%. Выкуп был увеличен на 10%. Мы выражаем свою признательность и надеемся на дальнейшее не менее плодотворное сотрудничество!
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <div class="iblock">
+                                    <div class="cell">
+                                        <img src="img/comment3.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="original">
+                                <a href="img/comment3.png" rel="comments" class="fancybox">Оригинал отзыва</a>
+                            </div>
+                            <div class="text">
+                                Ребята из  «Hyper Sales» - спасибо! Итоговый результат работы с компанией выше ожиданий: сформирована актуальная клиентская база, построена воронка продаж и процесс привлечения клиентов, усовершенствованы скрипты. В итоге за 3 месяца работы мы вышли на 200 сделок в месяц.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <div class="iblock">
+                                    <div class="cell">
+                                        <img src="img/comment4.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="original">
+                                <a href="img/comment4.png" rel="comments" class="fancybox">Оригинал отзыва</a>
+                            </div>
+                            <div class="text">
+                               Мы можем смело рекомендовать компанию «Hyper Sales» в качестве надежного и добросовестного партнера, поскольку это современный и технологичный call-центр, в котором работают отзывчивые люди, профессионалы своего дела.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="order_sales block">
+            <div class="wrap_c">
+                <h2>
+                  АКЦИЯ
+                </h2>
+                <hr>
+                <p>
+                    Закажите <strong>бесплатный сплит-тест</strong><br />
+                    на 30 заказов вашего call- центра и Hypersales<br />
+                    и сравните результаты!
+                </p>
+                <a href="#order_sales" class="fancybox button">
+                    Заказать<br>
+                    по акции
+                </a>
+            </div>
+        </section>
+        <section class="stages_our_work block">
+            <div class="wrap_c">
+                <div class="title">
+                    Этапы <span>нашей работы</span>
+                </div>
+                <div class="items">
+                    <div class="item item_1">
+                        <div class="img">
+                            <img src="img/stages1.png" alt="" />
+                        </div>
+                        <div class="text">
+                            <a href="#anck_7" class="ankor_link">Заполните заявку</a>
+                            <br />
+                            на сайте
+                        </div>
+                    </div>
+                    <div class="item item_2">
+                        <div class="img">
+                            <img src="img/stages2.png" alt="" />
+                        </div>
+                        <div class="text">
+                            Обсудите с менеджером условия сотрудничества, получите коммерческе предложение по почте, <a href="#take_sale_btn" class="fancybox">получите скидку 30%</a>
+                            на первый месяц работы!
+                        </div>
+                    </div>
+                    <div class="item item_3">
+                        <div class="img">
+                            <img src="img/stages3.png" alt="" />
+                        </div>
+                        <div class="text">
+                            Проведите интеграцию
+                            по API за 1 день
+                        </div>
+                    </div>
+                    <div class="item item_4">
+                        <div class="img">
+                            <img src="img/stages4.png" alt="" />
+                        </div>
+                        <div class="text">
+                            Мы готовы принимать заказы, оплата по фатку!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="anck_7" class="form_section block">
+            <div class="wrap_c">
+                <div class="content">
+                    <div class="title">
+                        Подключите Hypersales за 1 день,
+                        <br />
+                        <span>и увеличьте свою прибыль!</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="phone">
+                        Звоните: <strong>+7 (910) 559-09-57</strong>
+                    </div>
+                    <div class="sale">
+                        <img src="img/percent_icon.gif" alt="" />
+                        <div class="text">
+                            <strong>АКЦИЯ!</strong> Только до 09.03.2016 <strong>скидка 30%</strong> на стоимость минуты
+                            работы оператора на первый месяц работы!
+                        </div>
+                    </div>
+                </div>
+                <div class="form_block">
+                    <form action="/success/" method="post">
+                        <p>
+                            Отправьте заявку и получите <br /> <strong>бесплатную консультацию</strong> <br />
+                            как увеличить прибыль бизнеса
+                            с помощью HYPERSALES
+                        </p>
+                            <input type="text" placeholder="Фамилия Имя Отчество"  name="name" value="">
+                            <input type="text" placeholder="Ваш телефон"  name="phone" value="">
+                            <div class="reolader">
+                            <button class="mm_button" onclick="checkFields(event, this);">
+                                Получить<br>
+                                консультацию
+                            </button>
+                            <div class="ajax_loader_block"><img class="ajax_loader" src="/img/ajax-loader.gif" alt="Идет отправка данных"> <span class="ajax_loader">Идет отправка данных</span></div>
+                            </div>
+              <input type="hidden" name="productsum" value="1000 руб." />
+              <input type="hidden" name="delivery" value="100 руб." />
+              <input type="hidden" name="totalsum" value="1100 руб." />
+              <input type="hidden" name="lead" value="" />
+              <input type="hidden" name="subid" value="" />
+              <input type="hidden" name="id_st" value="" />
+              <input type="hidden" name="user" value="1" />
+              <input type="hidden" name="adress" value="Уточнить у покупателя">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="anck_6" class="map block">
+            <div class="balloon">
+                <div class="title">
+                    Hypersales
+                </div>
+                <p>Москва , ул. Дружбы д 2.</p>
+                <p><strong>+7 (910) 559-09-57</strong></p>
+                <p><a href="mailto:hypersalescall@gmail.com">hypersalescall@gmail.com</a></p>
+            </div>
+            <div id="map"></div>
+        </section>
+        <footer class="block">
+            <div class="wrap_c">
+                <div class="copy">
+                    Hypersales 2015 &copy;
+                </div>
+                <div class="right">
+                    <ul class="ankor_nav">
+                        <li>
+                            <a href="#anck_1">Как мы это делаем </a>
+                        </li>
+                        <li>
+                            <a href="#anck_2">Мы в цифрах</a>
+                        </li>
+                        <li>
+                            <a href="#anck_4">Сравнить</a>
+                        </li>
+                        <li>
+                            <a href="#anck_3">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="#anck_5">Отзывы </a>
+                        </li>
+                        <li>
+                            <a href="#anck_6">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter37847355 = new Ya.Metrika({
+                    id:37847355,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/37847355" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>
