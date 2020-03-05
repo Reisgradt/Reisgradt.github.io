@@ -10,12 +10,12 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'init',
-      component: () => import('../view/InputPort')
+      component: require('../view/InputPort').default
     },
     {
       path: '/editor',
       name: 'editor',
-      component: () => import('../view/Editor')
+      component: require('../view/Editor').default
     }
   ]
 });

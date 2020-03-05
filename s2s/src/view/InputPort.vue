@@ -34,15 +34,18 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['updatePort']),
+    ...mapMutations(['updatePort', 'updateErr']),
     ...mapActions(['getDirs']),
     connect() {
       this.isConnection = true;
-      
+
       this.getDirs().then(status => {
         this.isConnection = false;
 
-        status ? this.$router.push({ name: 'editor' }) : null;
+        if (status) {
+          this.updateErr();
+          this.$router.push({ name: 'editor' });
+        }
       });
     }
   },
