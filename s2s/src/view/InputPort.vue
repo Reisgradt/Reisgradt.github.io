@@ -14,6 +14,10 @@ section.init-block
       button.port-input__btn(
         @click='connect'
       ) Start
+    p 
+      | or 
+      a(href='../assets/server.py' download) download the local server 
+      | to get started
 
     //- Loader
     div.port-input__loader(
@@ -136,6 +140,9 @@ export default {
 
   & &__label
     margin-bottom: 15px
+
+  & &__group
+    margin-bottom: 10px
 
   &__group &__input
     margin-right: 10px
