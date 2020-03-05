@@ -16,7 +16,7 @@ section.init-block
       ) Start
     p 
       | or 
-      a(href='../assets/server.py' download) download the local server 
+      a(href='assets/server.py' download) download the local server 
       | to get started
 
     //- Loader
