@@ -1,19 +1,21 @@
 <template lang="pug">
 section.editor-block
   .dirs
-    ul.list
-      li.nav-item(
-        v-for='(item, i) in listDir'
-        :key='"nav" + i'
-        :class='{"file": item.isFile, "dir": !item.isFile}'
-      ) {{ item.name }}
+    List(
+      :items='listDir'
+    )
   .code
 </template>
 
 <script>
 import { mapState } from 'vuex';
 
+import List from '../components/List';
+
 export default {
+  components: {
+    List
+  },
   computed: {
     ...mapState(['listDir'])
   }

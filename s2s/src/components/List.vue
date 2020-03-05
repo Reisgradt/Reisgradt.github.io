@@ -3,7 +3,7 @@ ul.list
   li.nav-item(
     v-for='(item, i) in items'
     :key='"item" + i'
-    :class='{"file": item.isFile, "dir": !item.isFile && item.nested.length > 0}'
+    :class='{"file": item.isFile, "dir": !item.isFile}'
     @click='toggleItem()'
   )
     span.nav-name {{ item.name }}
@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     toggleItem() {
-      
+
     }
   }
 }
@@ -45,7 +45,7 @@ export default {
     margin-bottom: 0
 
 .nav-name
-  display: block
+  display: inline-block
 
 .file:before,
 .dir:before,
